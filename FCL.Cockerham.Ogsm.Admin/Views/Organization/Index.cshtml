@@ -1,0 +1,74 @@
+﻿@model IEnumerable<FCL.Cockerham.Ogsm.Entities.DTOs.OrganizationDto>
+
+@{
+    ViewBag.Title = "Administration Page";
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#pbFilter").click(function () {
+            $.get("/Organization/filter4Organization", { orgName: $("#NameId").val() }, function (data) {
+                $("#divOrganization").html(data);
+            })
+        })
+    });
+
+    $(function () {
+        $("#pbReset").click(function () {
+            $("#NameId").val('');
+            $.get("/Organization/filterReset", {}, function (data) {
+                $("#divOrganization").html(data);
+            })
+        })
+    });
+
+    $(document).ready(function () {
+        $(":input[type='button']").button();
+        $('.collapse').collapse();
+    });
+</script>
+
+<p class="lead">
+    Organizations
+</p>
+<div role="tablist" class="panel-group">
+    <div class="panel panel-success" style="width:30%;">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a aria-controls="collapseListGroup1" aria-expanded="false" href="#collapseListGroup1" data-toggle="collapse" role="button" class="collapsed">@Html.Raw(Resources.SystemControls.SearchFilter)</a>
+            </h4>
+        </div>
+        <div aria-labelledby="collapseListGroupHeading1" role="tabpanel" class="panel-collapse collapse" id="collapseListGroup1" aria-expanded="true" style="height: 0px;">
+            <table class="table table-striped">
+                <tr>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        <input type="text" id="NameId" name="NameId" class="form-control" style="width:200px;" maxlength="30" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" class="btn btn-info" value="@Html.Raw(Resources.SystemControls.Filter)" id="pbFilter" name="pbFilter" />
+                        <input type="button" class="btn btn-info" value="@Html.Raw(Resources.SystemControls.Reset)" id="pbReset" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<br />
+<div class="panel panel-primary" style="width:80%;">
+    <div class="panel-heading">
+        Organization @Html.Raw(Resources.SystemMessages.TableHeader)
+    </div>
+    <div class="panel-body">
+        @Html.Partial("_ListOrganizationTable", Model)
+    </div>
+    <div class="panel-footer">
+        <div>
+            <input type="button" class="btn btn-primary" value="@Html.Raw(Resources.SystemControls.Create)" onclick="location.href='@Url.Action("Create", "Organization")'" />
+        </div>
+    </div>
+</div>

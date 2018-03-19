@@ -1,0 +1,38 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.CsfDto
+
+@{
+    ViewBag.Title = "Stratus OGSM - Client Portal Company Setup - CSF";
+}
+
+<script src="~/Scripts/App/CompanySetup/Csf/Csf.js"></script>
+
+<section class="content-header">
+    <h1>
+        Company Setup - CSF
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li class="active">Company Setup - CSF</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="col-lg-12 ">
+        <div>
+            <div ng-controller="CsfViewModel as csfVm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box box-success">
+                            @Html.Partial("_CreateCsf", @Model)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        @Html.Partial("_CsfGrid")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

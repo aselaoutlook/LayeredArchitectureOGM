@@ -1,0 +1,51 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.StateDto
+
+<div class="box-header with-border">
+    <h3 class="box-title">Add New State</h3>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <span id="createStateStatusLoader">
+    </span>
+</div>
+
+<div class="box-body">
+    <form id="frmCreateState" name="frmCreateState" ng-model-options="{ allowInvalid: true}" class="css-form">
+        <input type="hidden" ng-model="State.StateId" name="txtStateId" id="txtStateId" />
+        <div class="form-group">
+            Global Region
+            <select id="ddlGlobalRegionId" name="ddlGlobalRegionId" required ng-model="State.GlobalRegionId" class="form-control"
+                    ng-change="LoadCountries()" ng-options="region.Name for region in GlobalRegion track by region.GlobalRegionId">
+                <option value="">Select Global Region</option>
+            </select>
+            <span class="text-danger pull-right" ng-show="frmCreateState.ddlGlobalRegionId.$touched && frmCreateState.ddlGlobalRegionId.$error.required">Select Global Region</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CountryId, "Country", new { @class = "form-label" })
+            <select id="ddlCountryId" name="ddlCountryId" ng-disabled="!Country" ng-required="true" ng-model="State.CountryId" class="form-control"
+                    ng-options="country.Name for country in Country track by country.CountryId">
+                <option value="">Select Country</option>
+            </select>
+            <span class="text-danger pull-right" ng-show="frmCreateState.ddlCountryId.$touched && frmCreateState.ddlCountryId.$error.required">Select Country</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.StateName, new { @class = "form-label" })
+            <input id="txtStateName" name="txtStateName" ng-model="State.StateName" required type="text" ng-maxlength="50" placeholder="Enter State Name" class="form-control" />
+            <span class="text-danger pull-right" ng-show="frmCreateState.txtStateName.$touched && frmCreateState.txtStateName.$error.required">State Name is Required.</span>
+            <span class="text-danger pull-right" ng-show="frmCreateState.txtStateName.$error.maxlength">Max. Leangth 50</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.StateCode, new { @class = "form-label" })
+            <input id="txtStateCode" name="txtStateCode" ng-model="State.StateCode" type="text" required ng-maxlength="10" placeholder="Enter State Code..." class="form-control" />
+            <span class="text-danger pull-right" ng-show="frmCreateState.txtStateCode.$touched && frmCreateState.txtStateCode.$error.required">State Code is Required.</span>
+            <span class="text-danger pull-right" ng-show="frmCreateState.txtStateCode.$error.maxlength">Max. Leangth 10</span>
+        </div>
+    </form>
+</div>
+<div class="box-footer">
+    <input type="reset" id="btnCancel" value="Cancel" class="btn" ng-click="Clear()">
+    <input type="button" id="btnSave" name="btnSave" value="Save" class="btn btn-info pull-right" ng-click="Save()" ng-disabled="frmCreateState.$invalid">     
+</div>
+
+
+
+
+

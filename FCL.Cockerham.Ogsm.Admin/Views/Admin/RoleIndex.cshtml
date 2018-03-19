@@ -1,0 +1,61 @@
+﻿@model IEnumerable<FCL.Cockerham.Ogsm.Entities.DTOs.RoleDto>
+@{
+    ViewBag.Title = "Roles";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(":input[type='button']").button();
+    });
+</script>
+<div class="panel panel-primary table-responsive">
+    <div class="panel-heading">
+        Role Details
+    </div>
+    <div class="panel-body">
+        <table id="RoleTable" class="table table-striped table-hover" style="width: 80%">
+            <thead>
+            <th>
+                Role Name
+            </th>
+            <th>
+                Role Description
+            </th>
+            <th>
+                Is System Admin
+            </th>
+            <th style="width: 8%">
+                Action
+            </th>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.RoleName, "RoleDetails", new { id = item.RoleId })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RoleDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsSysAdmin, new {@class = "form-control" })
+                    </td>
+                    <td>
+                        <center>
+                            <a href="@Url.Action("RoleEdit", "Admin", new { id = item.RoleId })">
+                                <span class="glyphicon glyphicon-edit"></span>
+                            </a>
+                            <a href="@Url.Action("RoleDelete", "Admin", new { id = item.RoleId })">
+                                <span class="deleteUser glyphicon glyphicon-remove"></span>
+                            </a>
+                        </center>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="panel-footer">
+        <input type="button" value="Create Role" class="btn btn-primary" onclick="location.href='@Url.Action("RoleCreate", "Admin")'" />
+        &nbsp;&nbsp;
+        @Html.ActionLink("Go to Users", "Index", "Admin")
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.CountryDto
+
+@{
+    ViewBag.Title = "Stratus OGSM - Client Portal Company Setup - Countries";
+}
+
+<script src="~/Scripts/App/CompanySetup/Country/Country.js"></script>
+
+<section class="content-header">
+    <h1>
+        Company Setup - Countries
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li class="active">Company Setup - Countries</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="col-lg-12 ">
+        <div>
+            <div ng-controller="CountryViewModel as countryVm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box box-success">
+                            @Html.Partial("_CreateCountry", @Model)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        @Html.Partial("_CountryGrid")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->
+
+

@@ -1,0 +1,38 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.StTypeDto
+
+@{
+    ViewBag.Title = "Stratus OGSM - Client Portal Company Setup - StTypes";
+}
+
+<script src="~/Scripts/App/CompanySetup/StType/StType.js"></script>
+
+<section class="content-header">
+    <h1>
+        Company Setup - StTypes
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li class="active">Company Setup - StTypes</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="col-lg-12 ">
+        <div ng-controller="StTypeViewModel as stTypeVm">
+            <div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box box-success">
+                            @Html.Partial("_CreateStType", @Model)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        @Html.Partial("_StTypeGrid")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

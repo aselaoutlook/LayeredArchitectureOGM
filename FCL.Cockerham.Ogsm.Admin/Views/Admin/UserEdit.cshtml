@@ -1,0 +1,46 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.UserDto
+@{
+    ViewBag.Title = "User - " + Model.UserName;
+    if (!string.IsNullOrEmpty(Model.UserName))
+    {
+        ViewBag.Title = ViewBag.Title + " (" + Model.UserName + ")";
+    }
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(":input[type='button']").button();
+        $(":input[type='submit']").button();
+    });
+</script>
+@using (Html.BeginForm("UserEdit", "Admin", FormMethod.Post))
+{
+    
+    <div class="panel panel-primary table-responsive">
+        <div class="panel-heading">
+            User Details
+        </div>
+        <div class="panel-body">
+            <input name='User_Id' id='User_Id' type="hidden" value="@ViewBag.UserId" />
+            @Html.Partial("_userDetailsEdit", Model)
+        </div>
+        <div class="panel-footer">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </div>
+
+    <div class="panel panel-primary table-responsive">
+        <div class="panel-heading">
+            Roles Associated with this User
+        </div>
+        <div class="panel-body">
+            @Html.Partial("_ListUserRoleTable", Model)
+            <br />
+            @Html.Partial("_ListEditableUserRoleTable")
+        </div>
+        <div class="panel-footer">
+            @Html.ActionLink("Go to Roles", "RoleIndex", "Admin")
+            &nbsp;|&nbsp;
+            @Html.ActionLink("Go to Users", "Index", "Admin")
+        </div>
+    </div>
+}

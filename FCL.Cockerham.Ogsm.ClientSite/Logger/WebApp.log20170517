@@ -1,0 +1,631 @@
+{ERROR}17/05/2017 13:23:02 - Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+System.NotSupportedException: Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConstantTranslator.TypedTranslate(ExpressionConverter parent, ConstantExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.UnaryTranslator.TypedTranslate(ExpressionConverter parent, UnaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.ObjectQueryIncludeTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetList(Expression`1 filter, Func`2 orderBy, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 224
+   at FCL.Cockerham.Ogsm.Domain.StTypeService.GetStTypesByBusinessUnitId(Int64 _businessUnitId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StTypeService.cs:line 67
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.StTypeApiController.GetStTypesByBusinessUnitId(Int64 BusinessUnitId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\StTypeApiController.cs:line 74
+{ERROR}17/05/2017 13:23:07 - Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+System.NotSupportedException: Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConstantTranslator.TypedTranslate(ExpressionConverter parent, ConstantExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.UnaryTranslator.TypedTranslate(ExpressionConverter parent, UnaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.ObjectQueryIncludeTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetList(Expression`1 filter, Func`2 orderBy, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 224
+   at FCL.Cockerham.Ogsm.Domain.StTypeService.GetStTypesByBusinessUnitId(Int64 _businessUnitId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StTypeService.cs:line 67
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.StTypeApiController.GetStTypesByBusinessUnitId(Int64 BusinessUnitId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\StTypeApiController.cs:line 74
+{ERROR}17/05/2017 13:24:15 - Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+System.NotSupportedException: Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConstantTranslator.TypedTranslate(ExpressionConverter parent, ConstantExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.UnaryTranslator.TypedTranslate(ExpressionConverter parent, UnaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.ObjectQueryIncludeTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetList(Expression`1 filter, Func`2 orderBy, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 224
+   at FCL.Cockerham.Ogsm.Domain.StTypeService.GetStTypesByBusinessUnitId(Int64 _businessUnitId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StTypeService.cs:line 67
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.StTypeApiController.GetStTypesByBusinessUnitId(Int64 BusinessUnitId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\StTypeApiController.cs:line 74
+{ERROR}17/05/2017 13:24:47 - Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+System.NotSupportedException: Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConstantTranslator.TypedTranslate(ExpressionConverter parent, ConstantExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.UnaryTranslator.TypedTranslate(ExpressionConverter parent, UnaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.ObjectQueryIncludeTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetList(Expression`1 filter, Func`2 orderBy, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 224
+   at FCL.Cockerham.Ogsm.Domain.StTypeService.GetStTypesByBusinessUnitId(Int64 _businessUnitId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StTypeService.cs:line 67
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.StTypeApiController.GetStTypesByBusinessUnitId(Int64 BusinessUnitId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\StTypeApiController.cs:line 74
+{ERROR}17/05/2017 13:25:00 - Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+System.NotSupportedException: Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConstantTranslator.TypedTranslate(ExpressionConverter parent, ConstantExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.UnaryTranslator.TypedTranslate(ExpressionConverter parent, UnaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.ObjectQueryIncludeTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetList(Expression`1 filter, Func`2 orderBy, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 224
+   at FCL.Cockerham.Ogsm.Domain.StTypeService.GetStTypesByBusinessUnitId(Int64 _businessUnitId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StTypeService.cs:line 67
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.StTypeApiController.GetStTypesByBusinessUnitId(Int64 BusinessUnitId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\StTypeApiController.cs:line 74
+{ERROR}17/05/2017 15:23:31 - Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+System.NotSupportedException: Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConstantTranslator.TypedTranslate(ExpressionConverter parent, ConstantExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.UnaryTranslator.TypedTranslate(ExpressionConverter parent, UnaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.ObjectQueryIncludeTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetList(Expression`1 filter, Func`2 orderBy, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 224
+   at FCL.Cockerham.Ogsm.Domain.PillarService.GetPillarsByStTypeId(Int64 _stTypeId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\PillarService.cs:line 68
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.PillarApiController.GetPillarsByStTypeId(Int64 StTypeId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\PillarApiController.cs:line 49
+{ERROR}17/05/2017 15:23:42 - Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+System.NotSupportedException: Unable to create a constant value of type 'System.Object'. Only primitive types or enumeration types are supported in this context.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConstantTranslator.TypedTranslate(ExpressionConverter parent, ConstantExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.UnaryTranslator.TypedTranslate(ExpressionConverter parent, UnaryExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.ObjectQueryIncludeTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetList(Expression`1 filter, Func`2 orderBy, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 224
+   at FCL.Cockerham.Ogsm.Domain.PillarService.GetPillarsByStTypeId(Int64 _stTypeId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\PillarService.cs:line 68
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.PillarApiController.GetPillarsByStTypeId(Int64 StTypeId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\PillarApiController.cs:line 49
+{ERROR}17/05/2017 15:31:02 - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6 -> GoalCategoryDto
+System.Data.Entity.DynamicProxies.Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6 -> FCL.Cockerham.Ogsm.Entities.DTOs.GoalCategoryDto
+
+Destination path:
+ICollection`1[0].ActionPlans0[0].ActionPlans0[0].ActionPlans0[0].StrategicDriver0[0].StrategicDriver0[0].CalendarEvents0[0].CalendarEvents0[0].CalendarEvents0[0].Goal0[0].Goal0[0]
+
+Source value:
+System.Data.Entity.DynamicProxies.Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6 -> GoalCategoryDto
+System.Data.Entity.DynamicProxies.Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6 -> FCL.Cockerham.Ogsm.Entities.DTOs.GoalCategoryDto
+
+Destination path:
+ICollection`1[0].ActionPlans0[0].ActionPlans0[0].ActionPlans0[0].StrategicDriver0[0].StrategicDriver0[0].CalendarEvents0[0].CalendarEvents0[0].CalendarEvents0[0].Goal0[0].Goal0[0]
+
+Source value:
+System.Data.Entity.DynamicProxies.Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.EnumerableMapperBase`1.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.CollectionMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.EnumerableMapperBase`1.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.CollectionMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.EnumerableMapperBase`1.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.CollectionMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.MappingEngine.MapCore(Object source, Type sourceType, Type destinationType, MappingOperationOptions options)
+   at AutoMapper.MappingEngine.Map(Object source, Type sourceType, Type destinationType, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source)
+   at AutoMapper.Mapper.Map[TDestination](Object source)
+   at FCL.Cockerham.Ogsm.Domain.GoalCategoryService.GetAllGoalCategoriesByOrganization(Int64 _organizationId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\GoalCategoryService.cs:line 73
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Goals.Controllers.Api.GoalCategoryApiController.GetAllGoalCategoriesByOrganization() in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Goals\Controllers\Api\GoalCategoryApiController.cs:line 50
+{ERROR}17/05/2017 16:09:04 - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6 -> GoalCategoryDto
+System.Data.Entity.DynamicProxies.Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6 -> FCL.Cockerham.Ogsm.Entities.DTOs.GoalCategoryDto
+
+Destination path:
+ICollection`1[0].ActionPlans0[0].ActionPlans0[0].ActionPlans0[0].StrategicDriver0[0].StrategicDriver0[0].CalendarEvents0[0].CalendarEvents0[0].CalendarEvents0[0].Goal0[0].Goal0[0]
+
+Source value:
+System.Data.Entity.DynamicProxies.Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6 -> GoalCategoryDto
+System.Data.Entity.DynamicProxies.Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6 -> FCL.Cockerham.Ogsm.Entities.DTOs.GoalCategoryDto
+
+Destination path:
+ICollection`1[0].ActionPlans0[0].ActionPlans0[0].ActionPlans0[0].StrategicDriver0[0].StrategicDriver0[0].CalendarEvents0[0].CalendarEvents0[0].CalendarEvents0[0].Goal0[0].Goal0[0]
+
+Source value:
+System.Data.Entity.DynamicProxies.Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.EnumerableMapperBase`1.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.CollectionMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.EnumerableMapperBase`1.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.CollectionMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.EnumerableMapperBase`1.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.CollectionMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.MappingEngine.MapCore(Object source, Type sourceType, Type destinationType, MappingOperationOptions options)
+   at AutoMapper.MappingEngine.Map(Object source, Type sourceType, Type destinationType, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source)
+   at AutoMapper.Mapper.Map[TDestination](Object source)
+   at FCL.Cockerham.Ogsm.Domain.GoalCategoryService.GetAllGoalCategoriesByOrganization(Int64 _organizationId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\GoalCategoryService.cs:line 73
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Goals.Controllers.Api.GoalCategoryApiController.GetAllGoalCategoriesByOrganization() in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Goals\Controllers\Api\GoalCategoryApiController.cs:line 50
+{ERROR}17/05/2017 16:09:22 - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6 -> GoalCategoryDto
+System.Data.Entity.DynamicProxies.Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6 -> FCL.Cockerham.Ogsm.Entities.DTOs.GoalCategoryDto
+
+Destination path:
+ICollection`1[0].ActionPlans0[0].ActionPlans0[0].ActionPlans0[0].StrategicDriver0[0].StrategicDriver0[0].CalendarEvents0[0].CalendarEvents0[0].CalendarEvents0[0].Goal0[0].Goal0[0]
+
+Source value:
+System.Data.Entity.DynamicProxies.Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6 -> GoalCategoryDto
+System.Data.Entity.DynamicProxies.Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6 -> FCL.Cockerham.Ogsm.Entities.DTOs.GoalCategoryDto
+
+Destination path:
+ICollection`1[0].ActionPlans0[0].ActionPlans0[0].ActionPlans0[0].StrategicDriver0[0].StrategicDriver0[0].CalendarEvents0[0].CalendarEvents0[0].CalendarEvents0[0].Goal0[0].Goal0[0]
+
+Source value:
+System.Data.Entity.DynamicProxies.Goal_3EEAC283FFE1B3CF6F0D121CD63062ADF1DFB7C3908B04CC058C3FED9B6313A6
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.EnumerableMapperBase`1.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.CollectionMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.EnumerableMapperBase`1.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.CollectionMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.EnumerableMapperBase`1.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.CollectionMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.MappingEngine.MapCore(Object source, Type sourceType, Type destinationType, MappingOperationOptions options)
+   at AutoMapper.MappingEngine.Map(Object source, Type sourceType, Type destinationType, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source)
+   at AutoMapper.Mapper.Map[TDestination](Object source)
+   at FCL.Cockerham.Ogsm.Domain.GoalCategoryService.GetAllGoalCategoriesByOrganization(Int64 _organizationId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\GoalCategoryService.cs:line 73
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Goals.Controllers.Api.GoalCategoryApiController.GetAllGoalCategoriesByOrganization() in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Goals\Controllers\Api\GoalCategoryApiController.cs:line 50
+{ERROR}17/05/2017 17:23:45 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetSingle(Expression`1 filter, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 98
+   at FCL.Cockerham.Ogsm.Domain.StrategicDriverService.GetStrategicDriverByStrategicDriverId(Int64 _strategicDriverId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StrategicDriverService.cs:line 54
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Strategy.Controllers.Api.StrategicDriverApiController.Get(Int64 StrategicDriverId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Strategy\Controllers\Api\StrategicDriverApiController.cs:line 76
+{ERROR}17/05/2017 17:26:40 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetSingle(Expression`1 filter, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 98
+   at FCL.Cockerham.Ogsm.Domain.StrategicDriverService.GetStrategicDriverByStrategicDriverId(Int64 _strategicDriverId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StrategicDriverService.cs:line 54
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Strategy.Controllers.Api.StrategicDriverApiController.Get(Int64 StrategicDriverId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Strategy\Controllers\Api\StrategicDriverApiController.cs:line 76
+{ERROR}17/05/2017 17:28:25 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetSingle(Expression`1 filter, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 98
+   at FCL.Cockerham.Ogsm.Domain.StrategicDriverService.GetStrategicDriverByStrategicDriverId(Int64 _strategicDriverId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StrategicDriverService.cs:line 54
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Strategy.Controllers.Api.StrategicDriverApiController.Get(Int64 StrategicDriverId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Strategy\Controllers\Api\StrategicDriverApiController.cs:line 76
+{ERROR}17/05/2017 17:29:28 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetSingle(Expression`1 filter, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 98
+   at FCL.Cockerham.Ogsm.Domain.StrategicDriverService.GetStrategicDriverByStrategicDriverId(Int64 _strategicDriverId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StrategicDriverService.cs:line 54
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Strategy.Controllers.Api.StrategicDriverApiController.Get(Int64 StrategicDriverId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Strategy\Controllers\Api\StrategicDriverApiController.cs:line 76
+{ERROR}17/05/2017 17:30:39 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetSingle(Expression`1 filter, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 98
+   at FCL.Cockerham.Ogsm.Domain.StrategicDriverService.GetStrategicDriverByStrategicDriverId(Int64 _strategicDriverId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StrategicDriverService.cs:line 54
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Strategy.Controllers.Api.StrategicDriverApiController.Get(Int64 StrategicDriverId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Strategy\Controllers\Api\StrategicDriverApiController.cs:line 76
+{ERROR}17/05/2017 17:31:32 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetSingle(Expression`1 filter, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 98
+   at FCL.Cockerham.Ogsm.Domain.StrategicDriverService.GetStrategicDriverByStrategicDriverId(Int64 _strategicDriverId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StrategicDriverService.cs:line 54
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Strategy.Controllers.Api.StrategicDriverApiController.Get(Int64 StrategicDriverId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Strategy\Controllers\Api\StrategicDriverApiController.cs:line 76
+{ERROR}17/05/2017 17:33:21 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetSingle(Expression`1 filter, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 98
+   at FCL.Cockerham.Ogsm.Domain.StrategicDriverService.GetStrategicDriverByStrategicDriverId(Int64 _strategicDriverId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StrategicDriverService.cs:line 54
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Strategy.Controllers.Api.StrategicDriverApiController.Get(Int64 StrategicDriverId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Strategy\Controllers\Api\StrategicDriverApiController.cs:line 76
+{ERROR}17/05/2017 17:33:28 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetSingle(Expression`1 filter, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 98
+   at FCL.Cockerham.Ogsm.Domain.StrategicDriverService.GetStrategicDriverByStrategicDriverId(Int64 _strategicDriverId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StrategicDriverService.cs:line 54
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Strategy.Controllers.Api.StrategicDriverApiController.Get(Int64 StrategicDriverId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Strategy\Controllers\Api\StrategicDriverApiController.cs:line 76
+{ERROR}17/05/2017 17:33:38 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'Department'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetSingle(Expression`1 filter, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 98
+   at FCL.Cockerham.Ogsm.Domain.StrategicDriverService.GetStrategicDriverByStrategicDriverId(Int64 _strategicDriverId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StrategicDriverService.cs:line 54
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Strategy.Controllers.Api.StrategicDriverApiController.Get(Int64 StrategicDriverId) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Strategy\Controllers\Api\StrategicDriverApiController.cs:line 76

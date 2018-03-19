@@ -1,0 +1,26 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.GlobalRegionDto
+
+<div class="box-header with-border">
+    <h3 class="box-title">Add New GlobalRegion</h3>
+</div>
+
+<div class="box-body">
+    <form id="frmCreateGlobalRegion" name="frmCreateGlobalRegion" ng-model-options="{ allowInvalid: true}" class="css-form">
+        <input type="hidden" ng-model="GlobalRegion.GlobalRegionId" name="txtGlobalRegionId" id="txtGlobalRegionId" />
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, new { @class = "form-label" })
+            <input id="txtGlobalRegionName" required ng-model="GlobalRegion.Name" name="Name" type="text" ng-maxlength="50" placeholder="Enter Global Region Name" class="form-control" />
+            <span class="text-danger pull-right" ng-show="frmCreateGlobalRegion.Name.$touched && frmCreateGlobalRegion.Name.$error.required">Name is Required.</span>
+            <span class="text-danger pull-right" ng-show="frmCreateGlobalRegion.Name.$error.maxlength">Max. Leangth 50</span>
+        </div>
+    </form>
+</div>
+<div class="box-footer">
+    <input type="reset" id="btnCancel" value="Cancel" class="btn" ng-click="Clear()">
+    <input type="button" id="btnSave" name="btnSave" value="Save" class="btn btn-info pull-right" ng-click="Save()" ng-disabled="frmCreateGlobalRegion.$invalid">     
+</div>
+
+
+
+
+

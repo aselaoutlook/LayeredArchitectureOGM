@@ -1,0 +1,173 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.ActionPlanDto
+@{
+    ViewBag.Title = "Stratus OGSM - Client Portal Dashboard";
+}
+
+<script src="~/Scripts/App/DashboardSetup/Dashboard.js"></script>
+<script src="~/Scripts/App/DashboardSetup/ActionPlanModalController.js"></script>
+
+<section class="content-header">
+    <h1>
+        Stratus OGSM - Dashboard
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="col-lg-12 ">
+        <div>
+            <div ng-controller="DashboardController as ctrl">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Filter By</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <form id="frmDashboardFilter" name="frmDashboardFilter" class="css-form">
+                                        <div class="col-md-12">
+                                            <div class="form-group hide">                                                
+                                                <select id="ddlStTypeId" name="ddlStTypeId" ng-required="true" ng-model="Dashboard.StTypeId" class="form-control"
+                                                        ng-change="LoadBusinessUnits()" ng-options="stType.Name for stType in StType track by stType.StTypeId">
+                                                    <option value="">Select StType</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group hide">
+                                                <select id="ddlBusinessUnitId" name="ddlBusinessUnitId" required ng-model="Dashboard.BusinessUnitId" class="form-control"
+                                                        ng-change="LoadPillars()" ng-options="businessUnit.Name for businessUnit in BusinessUnit track by businessUnit.BusinessUnitId">
+                                                    <option value="">Select Business Unit</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group hide">
+                                                <select id="ddlPillarId" name="ddlPillarId" required ng-model="Dashboard.PillarId" class="form-control"
+                                                        ng-change="LoadGoal()" ng-options="pillar.Name for pillar in Pillar track by pillar.PillarId">
+                                                    <option value="">Select Pillar</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group hide">
+                                                <select id="ddlGoalId" name="ddlGoalId" ng-required="true" ng-model="Dashboard.GoalId" class="form-control"
+                                                        ng-change="LoadStrategicDrivers()" ng-options="goal.Name for goal in Goal track by goal.GoalId">
+                                                    <option value="">Select Goal</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <select id="ddlStrategicDriverId" name="ddlStrategicDriverId" ng-required="true" ng-model="Dashboard.StrategicDriverId" class="form-control"
+                                                        ng-change="LoadStrategicDriverById()" ng-options="strategicDriver.Name for strategicDriver in StrategicDriver track by strategicDriver.StrategicDriverId">
+                                                    <option value="">Select Strategy</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                    </div>
+                </div>
+                <div class="row" ng-show="ShowDetailsDiv()">
+                    <div class="col-md-12">
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Details</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <form id="frmDashboardFilter" name="frmDashboardFilter" class="css-form">
+                                        <div class="col-md-12">
+                                            <div class="form-group col-md-2">
+                                                <label>Goal: </label>
+                                            </div>
+                                            <div class="form-group col-md-10">
+                                                <label>{{Dashboard.StrategicDriverId.Goal.Name}}</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group col-md-2">
+                                                <label>Pillar: </label>
+                                            </div>
+                                            <div class="form-group col-md-10">
+                                                <label>{{Dashboard.StrategicDriverId.Pillar.Name}}</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group col-md-2">
+                                                <label>Strategic Driver: </label>
+                                            </div>
+                                            <div class="form-group col-md-10">
+                                                <label>{{Dashboard.StrategicDriverId.Name}}</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group col-md-2">
+                                                <label>Metric: </label>
+                                            </div>
+                                            <div class="form-group col-md-10">
+                                                <label>{{Dashboard.Metric}}</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-show="ShowActionPlanGrid()">
+                    <action-plan-area></action-plan-area>
+                </div>
+                <div ng-show="ShowActionPlanGrid()">
+                    <div class="box box-success">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Strategic Driver Metric Assessment</h3>
+                        </div>
+                        <div class="box-body">
+                            <input type="hidden" ng-model="StrategicDrivers.StrategicDriverId" name="txtStrategicDriverId" id="txtStrategicDriverId" />
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="TargetValue">Metric: </label>
+                                    <p>{{Dashboard.Metric}}</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="TargetValue">Target</label>
+                                    <input id="txtMetricTargetValue" ng-model="StrategicDriverForMetricUpdate.MetricTarget" name="MetricTargetValue" type="number"
+                                           ng-required="true" class="form-control" style="width:40% !important" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Assessment</label>
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <th>QTR</th>
+                                            <th>Value</th>
+                                            <th>QTR End Date</th>
+                                        </tr>
+                                        <tr ng-repeat="target in StrategicDriverForMetricUpdate.StrategicDriverTargets">
+                                            <td>{{target.QuaterName}}</td>
+                                            <td>
+                                                <input id="txtQuaterValue" ng-model="StrategicDriverForMetricUpdate.StrategicDriverTargets[$index].QuaterValue" name="QuaterValue" type="number"
+                                                       ng-required="true" style="width:100px;" />
+                                            </td>
+                                            <td><span class="badge bg-red">Total As Of: {{target.EndDate | date:'shortDate'}}</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="box-footer">
+                            <input type="reset" id="btnCancel" value="Cancel" class="btn" ng-click="Clear()">
+                            <input type="button" id="btnUpdate" name="btnUpdate" value="Update" class="btn btn-info pull-right" ng-click="UpdateStrategicDriverTargets()" ng-disabled="frmCreateOwner.$invalid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

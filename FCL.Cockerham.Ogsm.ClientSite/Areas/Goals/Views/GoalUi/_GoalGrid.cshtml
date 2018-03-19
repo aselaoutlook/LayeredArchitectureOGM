@@ -1,0 +1,43 @@
+﻿<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">Fiscal Year List</h3>
+    </div>
+    <div id="gridContent" class="box-body">
+        <table id="tblGoal" class="table table-bordered table-striped" ng-table="goalVm.tableParams">
+            <thead>
+                <tr>
+                    <th>Pillar</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Rationale Notes</th>
+                    <th>Target</th>
+                    <th>Primary Owner</th>
+                    <th>Secondry Owner</th>
+                    <th>Active</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="goal in $data">
+                    <td data-title="'Pillar'">{{goal.Pillar.Name}}</td>
+                    <td data-title="'Strat Date'">{{goal.StartDate | date:'shortDate'}}</td>
+                    <td data-title="'End Date'">{{goal.EndDate | date:'shortDate'}}</td>
+                    <td data-title="'RationaleNotes'">{{goal.RationaleNotes}}</td>
+                    <td data-title="'Target'">{{goal.Target}}</td>
+                    <td data-title="'Primary Owner'">{{goal.PrimaryOwner.FirstName}}&nbsp;{{goal.PrimaryOwner.LastName}}</td>
+                    <td data-title="'Secondry Owner'">{{goal.SecondryOwner.FirstName}} &nbsp;{{goal.SecondryOwner.LastName}}</td>
+                    <td data-title="'Is Active'">{{goal.IsActive ? "Yes":"No"}}</td>
+                    <td data-title="'Edit'">
+                        <button type="button"
+                                class="btn btn-default btn-xs pull-right"
+                                ng-click="LoadById(goal.GoalId)">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        @Resources.SystemResources.Common_webgrid_row_count_text <span id="rowCount">{{goalVm.tableParams.total()}}</span>
+    </div>
+</div>

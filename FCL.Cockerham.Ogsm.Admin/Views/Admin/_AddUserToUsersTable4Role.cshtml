@@ -1,0 +1,48 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.RoleDto
+<script type="text/javascript">
+    $(document).ready(function () {
+        //$('#AddUser').attr("disabled", true);
+        $('#AddUser').click(function () {
+            var _userId = $('#UserId').val();
+            var _id = $('#Role_Id').val();
+
+            if (_userId == '') {
+                return false;
+            }
+
+            var _parameters = { userId: _userId, id: _id };
+            $.ajax({
+                url: "/Admin/AddUser2RoleReturnPartialView",
+                type: "GET",
+                data: _parameters,
+                success: function (data, textStatus, jqXHR) {
+                    $('#UsersTable').html(data);
+                    $('#UserId').val("");
+                }
+            });
+        });      
+    });
+</script>
+@Html.HiddenFor(model => model.RoleId)
+<div class="panel panel-primary table-responsive" style="width:45%;">
+    <div class="panel-heading">
+        Add User To Role
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-hover">
+            <tr>
+                <td>
+                    User:
+                </td>
+                <td>
+                    @Html.DropDownList("UserId", null, string.Empty, new { style = "width:250px", @class = "form-control" })
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" id="AddUser" value="Add User To Role" class="btn btn-primary" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

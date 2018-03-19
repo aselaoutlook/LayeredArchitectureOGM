@@ -1,0 +1,38 @@
+﻿<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">Location List</h3>
+    </div>
+    <div id="gridContent" class="box-body">
+        <table id="tblLocations" class="table table-bordered table-striped" ng-table="locationVm.tableParams">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>State</th>
+                    <th>Country</th>
+                    <th>Global Region</th>
+                    <th>Is Global</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="location in $data">
+                    <td data-title="'Name'">{{location.Name}}</td>                    
+                    <td data-title="'State Name'">{{location.State.StateName}}</td>
+                    <td data-title="'Country'">{{location.Country.Name}}</td>
+                    <td data-title="'Global Region'">{{location.GlobalRegion.Name}}</td>
+                    <td data-title="'Is Global'">{{location.IsGlobal}}</td>
+
+                    <td data-title="'Edit'">
+                        <button type="button"
+                                class="btn btn-default btn-xs pull-right"
+                                ng-click="LoadById(location.LocationId)">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        @Resources.SystemResources.Common_webgrid_row_count_text <span id="rowCount">{{locationVm.tableParams.total()}}</span>
+    </div>
+</div>

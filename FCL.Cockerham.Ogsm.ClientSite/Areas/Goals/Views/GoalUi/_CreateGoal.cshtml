@@ -1,0 +1,97 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.GoalDto
+
+<div class="box-header with-border">
+    <h3 class="box-title">Add New Goal</h3>
+</div>
+
+<div class="box-body">
+    <form id="frmCreateGoal" name="frmCreateGoal" ng-model-options="{ allowInvalid: true}" class="css-form">
+        <input type="hidden" ng-model="Goal.GoalId" name="txtGoalId" id="txtGoalId" />
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Pillar, "Pillar", new { @class = "form-label" })
+                <select id="ddlPillarId" name="ddlPillarId" required ng-model="Goal.PillarId" class="form-control"
+                        ng-options="pillar.Name for pillar in Pillar track by pillar.PillarId">
+                    <option value="">Select Pillar</option>
+                </select>
+                <span class="text-danger pull-right" ng-show="frmCreateGoal.ddlPillarId.$touched && frmCreateGoal.ddlPillarId.$error.required">Select Pillar</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, new { @class = "form-label" })
+                <input id="txtGoalName" required ng-model="Goal.Name" name="Name" type="text" ng-maxlength="1500" placeholder="Enter Goal Name" class="form-control" />
+                <span class="text-danger pull-right" ng-show="frmCreateGoal.Name.$touched && frmCreateGoal.Name.$error.required">Name is Required.</span>
+                <span class="text-danger pull-right" ng-show="frmCreateGoal.Name.$error.maxlength">Max. Leangth 1500</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.StartDate, new { @class = "form-label" })
+                <p class="input-group">
+                    <input id="txtGoalStartYear" class="form-control" uib-datepicker-popup="yyyy/MM/dd"
+                           ng-model="Goal.StartDate" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" name="StartYear"
+                           alt-input-formats="altInputFormats" required="required" style="" type="text">
+
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+                <span class="text-danger pull-right" ng-show="frmCreateGoal.StartYear.$touched && frmCreateGoal.StartYear.$error.required">Start Year is Required.</span>
+                <span class="text-danger pull-right" ng-show="frmCreateGoal.StartYear.$error.date">Not a valid date!</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EndDate, new { @class = "form-label" })
+                <p class="input-group">
+
+                    <input id="txtGoalEndYear" class="form-control" uib-datepicker-popup="yyyy/MM/dd"
+                           ng-model="Goal.EndDate" is-open="popup3.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" name="EndYear"
+                           alt-input-formats="altInputFormats" required="required" style="" type="text">
+
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open3()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+                <span class="text-danger pull-right" ng-show="frmCreateGoal.EndYear.$touched && frmCreateGoal.EndYear.$error.required">End Year is Required.</span>
+                <span class="text-danger pull-right" ng-show="frmCreateGoal.EndYear.$error.date">Not a valid date!</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.PrimaryOwnerId, "Owner", new { @class = "form-label" })
+                <select id="ddlOwner1" name="ddlOwner1" required ng-model="Goal.PrimaryOwnerId" class="form-control"
+                        ng-options="primaryOwner.FirstName + ' ' + primaryOwner.LastName for primaryOwner in Owners track by primaryOwner.UserId">
+                    <option value="">Select Owner</option>
+                </select>
+                <span class="text-danger pull-right" ng-show="frmCreateGoal.ddlGoalCategoryId.$touched && frmCreateGoal.ddlGoalCategoryId.$error.required">Select Owner</span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.SecondryOwnerId, "Secondry Owner", new { @class = "form-label" })
+                <select id="ddlOwner2" name="ddlOwner2" required ng-model="Goal.SecondryOwnerId" class="form-control"
+                        ng-options="secondryOwner.FirstName + ' ' + secondryOwner.LastName for secondryOwner in Owners track by secondryOwner.UserId">
+                    <option value="">Select Secondry Owner</option>
+                </select>
+                @*<span class="text-danger pull-right" ng-show="frmCreateGoal.ddlGoalCategoryId.$touched && frmCreateGoal.ddlGoalCategoryId.$error.required">Select Secondry Owner</span>*@
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.RationaleNotes, new { @class = "form-label" })
+                <textarea id="txtRationaleNotes" ng-model="Goal.RationaleNotes" name="RationaleNotes" rows="2" ng-maxlength="1500" placeholder="Enter Rationale Notes..." class="form-control"></textarea>
+                <span class="text-danger pull-right" ng-show="frmCreateGoal.Description.$error.maxlength">Max. Leangth 300</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Target, new { @class = "form-label" })
+                <input id="txtTarget" required ng-model="Goal.Target" name="Target" type="number" placeholder="Select Target" class="form-control" />
+                <span class="text-danger pull-right" ng-show="frmCreateGoal.Target.$touched && frmCreateGoal.Target.$error.required">Target is Required.</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.SequenceNumber, new { @class = "form-label" })
+                <input id="txtSequenceNumber" required ng-model="Goal.SequenceNumber" name="SequenceNumber" type="number" placeholder="Sequence Number" class="form-control" />
+                @*<span class="text-danger pull-right" ng-show="frmCreateGoal.SequenceNumber.$touched && frmCreateGoal.SequenceNumber.$error.required">SequenceNumber is Required.</span>*@
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.IsActive, new { @class = "form-label" })
+                <input id="chkGoalIsActive" ng-model="Goal.IsActive" name="IsActive" type="checkbox" class="checkbox" />
+            </div>
+        </div>
+    </form>
+</div>
+<div class="box-footer">
+    <input type="reset" id="btnCancel" value="Cancel" class="btn" ng-click="Clear()">
+    <input type="button" id="btnSave" name="btnSave" value="Save" class="btn btn-info pull-right" ng-click="Save()" ng-disabled="frmCreateGoal.$invalid">
+</div>

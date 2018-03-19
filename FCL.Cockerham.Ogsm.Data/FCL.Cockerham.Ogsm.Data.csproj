@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2AC0EAF3-28E1-4DB1-835A-42E35D85A1F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FCL.Cockerham.Ogsm.Data</RootNamespace>
+    <AssemblyName>FCL.Cockerham.Ogsm.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Faker.Portable, Version=2.2.0.64, Culture=neutral, PublicKeyToken=968d76e55a3a9814, processorArchitecture=MSIL">
+      <HintPath>..\packages\Faker.Net.Portable.2.2.0.64\lib\portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1\Faker.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FizzWare.NBuilder, Version=3.0.1.0, Culture=neutral, PublicKeyToken=5651b03e12e42c12, processorArchitecture=MSIL">
+      <HintPath>..\packages\NBuilder.3.0.1.1\lib\FizzWare.NBuilder.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data Repositories\ActionOperatorRepository.cs" />
+    <Compile Include="Data Repositories\ActionPlanCommentRepository.cs" />
+    <Compile Include="Data Repositories\ActionPlanRepository.cs" />
+    <Compile Include="Data Repositories\ActionStatusRepository.cs" />
+    <Compile Include="Data Repositories\AppSettingBaseRepository.cs" />
+    <Compile Include="Data Repositories\AppSettingRepository.cs" />
+    <Compile Include="Data Repositories\AuditRepository.cs" />
+    <Compile Include="Data Repositories\CalendarEventRepository.cs" />
+    <Compile Include="Data Repositories\CountryRepository.cs" />
+    <Compile Include="Data Repositories\CsfRepository.cs" />
+    <Compile Include="Data Repositories\StTypeRepository.cs" />
+    <Compile Include="Data Repositories\DisplayBaseRepository.cs" />
+    <Compile Include="Data Repositories\DisplayNameRepository.cs" />
+    <Compile Include="Data Repositories\EmployeeRepository.cs" />
+    <Compile Include="Data Repositories\EmployeeStrategyRepository.cs" />
+    <Compile Include="Data Repositories\FiscalYearRepository.cs" />
+    <Compile Include="Data Repositories\GlobalRegionRepository.cs" />
+    <Compile Include="Data Repositories\GoalCategoryRepository.cs" />
+    <Compile Include="Data Repositories\GoalRepository.cs" />
+    <Compile Include="Data Repositories\GoalTargetRepository.cs" />
+    <Compile Include="Data Repositories\LocationRepository.cs" />
+    <Compile Include="Data Repositories\OrganizationRepository.cs" />
+    <Compile Include="Data Repositories\PermissionRepository.cs" />
+    <Compile Include="Data Repositories\PillarRepository.cs" />
+    <Compile Include="Data Repositories\RoleRepository.cs" />
+    <Compile Include="Data Repositories\BusinessUnitRepository.cs" />
+    <Compile Include="Data Repositories\ScorecardPerspectiveRepository.cs" />
+    <Compile Include="Data Repositories\StateRepository.cs" />
+    <Compile Include="Data Repositories\StrategicDriverRepository.cs" />
+    <Compile Include="Data Repositories\StrategicDriverTargetRepository.cs" />
+    <Compile Include="Data Repositories\TemplateRepository.cs" />
+    <Compile Include="Data Repositories\UserRepository.cs" />
+    <Compile Include="BaseRepository.cs" />
+    <Compile Include="Entity Configurations\ActionOperatorEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\ActionPlanCommentEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\ActionPlanEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\ActionStatusEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\AuditEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\BusinessUnitEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\CalendarEventEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\CountryEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\CSFEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\DepartmentEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\DisplayBaseEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\DisplayNameEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\EmployeeEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\EmployeeStrategyEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\FiscalYearEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\GlobalRegionEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\GoalCategoryEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\GoalEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\GoalTargetEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\LocationEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\OrganizationEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\PermissionEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\PillarEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\RoleEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\ScorecardPerspectiveEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\AppSettingBaseEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\AppSettingEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\StateEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\StrategicDriverEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\StrategicDriverTargetEntityConfiguration.cs" />
+    <Compile Include="Entity Configurations\UserEntityConfiguration.cs" />
+    <Compile Include="Migrations\201704260520185_Initial.cs" />
+    <Compile Include="Migrations\201704260520185_Initial.Designer.cs">
+      <DependentUpon>201704260520185_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705050831276_2017-05-05-ExcelChangesAppended.cs" />
+    <Compile Include="Migrations\201705050831276_2017-05-05-ExcelChangesAppended.Designer.cs">
+      <DependentUpon>201705050831276_2017-05-05-ExcelChangesAppended.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705120648299_2017-05-12-StType-Integrate-With-BusinessUnit.cs" />
+    <Compile Include="Migrations\201705120648299_2017-05-12-StType-Integrate-With-BusinessUnit.Designer.cs">
+      <DependentUpon>201705120648299_2017-05-12-StType-Integrate-With-BusinessUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705181002357_2017-05-18-ActionPlan-Integrate-With-Piller.cs" />
+    <Compile Include="Migrations\201705181002357_2017-05-18-ActionPlan-Integrate-With-Piller.Designer.cs">
+      <DependentUpon>201705181002357_2017-05-18-ActionPlan-Integrate-With-Piller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711130827496_DashboardFilterOrderChanged.cs" />
+    <Compile Include="Migrations\201711130827496_DashboardFilterOrderChanged.Designer.cs">
+      <DependentUpon>201711130827496_DashboardFilterOrderChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FclDBContext.cs" />
+    <Compile Include="FclInitializer.cs" />
+    <Compile Include="Uow\UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FCL.Cockerham.Ogsm.Data.Contracts\FCL.Cockerham.Ogsm.Data.Contracts.csproj">
+      <Project>{0ce9a5ee-3eb2-4a4b-9c75-9ff7137b850a}</Project>
+      <Name>FCL.Cockerham.Ogsm.Data.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FCL.Cockerham.Ogsm.Entities\FCL.Cockerham.Ogsm.Entities.csproj">
+      <Project>{352238b5-aae4-4db5-9971-37cfe29c5fb0}</Project>
+      <Name>FCL.Cockerham.Ogsm.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FCL.Web.Framework.Core.Common.Contracts\FCL.Web.Framework.Core.Common.Contracts.csproj">
+      <Project>{7fa28708-01dc-4f0a-ad0e-b8ed4a6a1736}</Project>
+      <Name>FCL.Web.Framework.Core.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FCL.Web.Framework.Core.Common\FCL.Web.Framework.Core.Common.csproj">
+      <Project>{8ecaa795-b67c-4d3a-a22c-464f71f42454}</Project>
+      <Name>FCL.Web.Framework.Core.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704260520185_Initial.resx">
+      <DependentUpon>201704260520185_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705050831276_2017-05-05-ExcelChangesAppended.resx">
+      <DependentUpon>201705050831276_2017-05-05-ExcelChangesAppended.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705120648299_2017-05-12-StType-Integrate-With-BusinessUnit.resx">
+      <DependentUpon>201705120648299_2017-05-12-StType-Integrate-With-BusinessUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705181002357_2017-05-18-ActionPlan-Integrate-With-Piller.resx">
+      <DependentUpon>201705181002357_2017-05-18-ActionPlan-Integrate-With-Piller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711130827496_DashboardFilterOrderChanged.resx">
+      <DependentUpon>201711130827496_DashboardFilterOrderChanged.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

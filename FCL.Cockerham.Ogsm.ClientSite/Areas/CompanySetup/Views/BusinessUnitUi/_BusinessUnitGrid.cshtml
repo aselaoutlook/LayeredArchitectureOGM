@@ -1,0 +1,37 @@
+﻿<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">Business Unit List</h3>
+    </div>
+    <div id="gridContent" class="box-body">
+        <table id="tblBusinessUnits" class="table table-bordered table-striped" ng-table="businessUnitVm.tableParams">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Location</th>
+                    <th>StType</th>
+                    <th>Active</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="businessUnit in $data">
+                    <td data-title="'Name'">{{businessUnit.Name}}</td>
+                    <td data-title="'Description'">{{businessUnit.Description}}</td>
+                    <td data-title="'Description'">{{businessUnit.Location}}</td>
+                    <td data-title="'StType'">{{businessUnit.StType.Name}}</td>
+                    <td data-title="'Active'">{{businessUnit.IsActive ? "Yes":"No"}}</td>
+                    <td data-title="'Edit'">
+                        <button type="button"
+                                class="btn btn-default btn-xs pull-right"
+                                ng-click="LoadById(businessUnit.BusinessUnitId)">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        @Resources.SystemResources.Common_webgrid_row_count_text <span id="rowCount">{{businessUnitVm.tableParams.total()}}</span>
+    </div>
+</div>

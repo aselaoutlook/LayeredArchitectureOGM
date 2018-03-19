@@ -1,0 +1,23 @@
+{ERROR}24/06/2016 15:20:24 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'StrategicDriverTarget'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StrategicDriver' does not declare a navigation property with the name 'StrategicDriverTarget'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__1[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetSingle(Expression`1 filter, String includeProperties) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 98
+   at FCL.Cockerham.Ogsm.Domain.StrategicDriverService.GetStrategicDriverByStrategicDriverId(Int64 _strategicDriverId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.Domain\StrategicDriverService.cs:line 43
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Strategy.Controllers.Api.StrategicDriverApiController.Get(Int64 StrategicDriverId) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.ClientSite\Areas\Strategy\Controllers\Api\StrategicDriverApiController.cs:line 71

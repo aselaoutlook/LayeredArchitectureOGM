@@ -1,0 +1,66 @@
+{ERROR}13/11/2017 14:09:56 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StType' does not declare a navigation property with the name 'BusinessUnit'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StType' does not declare a navigation property with the name 'BusinessUnit'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetPagedList(Int32 skip, Int32 pageSize, Expression`1 filter, Func`2 orderBy, String includeProperties) in D:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 257
+   at FCL.Cockerham.Ogsm.Domain.StTypeService.GetStTypeList(Int32 pageNo, Int32 pageSize, Int64 _organizationId, IUnitOfWork _dataRepositoryFactory) in D:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StTypeService.cs:line 60
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.StTypeApiController.Get(Int32 pageNo, Int32 pageSize) in D:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\StTypeApiController.cs:line 106
+{ERROR}13/11/2017 14:21:13 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StType' does not declare a navigation property with the name 'BusinessUnit'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StType' does not declare a navigation property with the name 'BusinessUnit'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetPagedList(Int32 skip, Int32 pageSize, Expression`1 filter, Func`2 orderBy, String includeProperties) in D:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 257
+   at FCL.Cockerham.Ogsm.Domain.StTypeService.GetStTypeList(Int32 pageNo, Int32 pageSize, Int64 _organizationId, IUnitOfWork _dataRepositoryFactory) in D:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StTypeService.cs:line 60
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.StTypeApiController.Get(Int32 pageNo, Int32 pageSize) in D:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\StTypeApiController.cs:line 106
+{ERROR}13/11/2017 14:21:50 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StType' does not declare a navigation property with the name 'BusinessUnit'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.StType' does not declare a navigation property with the name 'BusinessUnit'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetPagedList(Int32 skip, Int32 pageSize, Expression`1 filter, Func`2 orderBy, String includeProperties) in D:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 257
+   at FCL.Cockerham.Ogsm.Domain.StTypeService.GetStTypeList(Int32 pageNo, Int32 pageSize, Int64 _organizationId, IUnitOfWork _dataRepositoryFactory) in D:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\StTypeService.cs:line 60
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.StTypeApiController.Get(Int32 pageNo, Int32 pageSize) in D:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\StTypeApiController.cs:line 106
+{ERROR}13/11/2017 16:13:47 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.BusinessUnitApiController.Put(BusinessUnitDto businessUnit) in D:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\BusinessUnitApiController.cs:line 182
+{ERROR}13/11/2017 16:14:05 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.BusinessUnitApiController.Put(BusinessUnitDto businessUnit) in D:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\BusinessUnitApiController.cs:line 182
+{ERROR}13/11/2017 16:14:08 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.BusinessUnitApiController.Put(BusinessUnitDto businessUnit) in D:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\BusinessUnitApiController.cs:line 182

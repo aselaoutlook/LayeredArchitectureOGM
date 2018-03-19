@@ -1,0 +1,33 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.GoalCategoryDto
+
+<div class="box-header with-border">
+    <h3 class="box-title">Add New Goal Category</h3>
+</div>
+
+<div class="box-body">
+    <form id="frmCreateGoalCategory" name="frmCreateGoalCategory" ng-model-options="{ allowInvalid: true}" class="css-form">
+        <input type="hidden" ng-model="GoalCategory.GoalCategoryId" name="txtGoalCategoryId" id="txtGoalCategoryId" />
+        <div class="form-group">
+            @Html.LabelFor(model => model.DepartmentId, "Department", new { @class = "form-label" })
+            <select id="ddlDepartmentId" name="ddlDepartmentId" ng-required="true" ng-model="GoalCategory.DepartmentId" class="form-control"
+                    ng-options="department.Name for department in Department track by department.DepartmentId">
+                <option value="">Select Department</option>
+            </select>
+            <span class="text-danger pull-right" ng-show="frmCreateGoalCategory.ddlDepartmentId.$touched && frmCreateGoalCategory.ddlDepartmentId.$error.required">Select Department</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, new { @class = "form-label" })
+            <input id="txtGoalCategoryName" required ng-model="GoalCategory.Name" name="Name" type="text" ng-minlength="3" ng-maxlength="300" placeholder="Enter Goal Category Name" class="form-control" />
+            <span class="text-danger pull-right" ng-show="frmCreateGoalCategory.Name.$error.maxlength">Max. Leangth 300</span>
+        </div>
+    </form>
+</div>
+<div class="box-footer">
+    <input type="reset" id="btnCancel" value="Cancel" class="btn" ng-click="Clear()">
+    <input type="button" id="btnSave" name="btnSave" value="Save" class="btn btn-info pull-right" ng-click="Save()" ng-disabled="frmCreateGoalCategory.$invalid">     
+</div>
+
+
+
+
+

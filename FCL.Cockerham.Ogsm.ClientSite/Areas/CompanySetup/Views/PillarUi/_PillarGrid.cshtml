@@ -1,0 +1,35 @@
+﻿<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">Pillar List</h3>
+    </div>
+    <div id="gridContent" class="box-body">
+        <table id="tblPillars" class="table table-bordered table-striped" ng-table="pillarVm.tableParams">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Strategy Type</th>
+                    <th>Active</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pillar in $data">
+                    <td data-title="'Name'">{{pillar.Name}}</td>
+                    <td data-title="'Description'">{{pillar.Description}}</td>
+                    <td data-title="'St Type'">{{pillar.StType.Name}}</td>
+                    <td data-title="'Is Active'">{{pillar.IsActive ? "Yes":"No"}}</td>
+                    <td data-title="'Edit'">
+                        <button type="button"
+                                class="btn btn-default btn-xs pull-right"
+                                ng-click="LoadById(pillar.PillarId)">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        @Resources.SystemResources.Common_webgrid_row_count_text <span id="rowCount">{{pillarVm.tableParams.total()}}</span>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.FiscalYearDto
+
+<div class="box-header with-border">
+    <h3 class="box-title">Add New Fiscal Year</h3>
+</div>
+
+<div class="box-body">
+    <form id="frmCreateFiscalYear" name="frmCreateFiscalYear" ng-model-options="{ allowInvalid: true}" class="css-form">
+        <input type="hidden" ng-model="FiscalYear.FiscalYearId" name="txtFiscalYearId" id="txtFiscalYearId" />
+        <div class="form-group">
+            @Html.LabelFor(model => model.StartYear, "Start Date", new { @class = "form-label" })
+            <p class="input-group">                
+                <input id="txtFiscalYearStartYear" class="form-control" uib-datepicker-popup="yyyy/MM/dd"
+                       ng-model="FiscalYear.StartYear" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" name="StartYear"
+                       alt-input-formats="altInputFormats" required="required" style="" type="text">
+
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+            <span class="text-danger pull-right" ng-show="frmCreateFiscalYear.StartYear.$touched && frmCreateFiscalYear.StartYear.$error.required">Start Date is Required.</span>
+            <span class="text-danger pull-right" ng-show="frmCreateFiscalYear.StartYear.$error.date">Not a valid date!</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.EndYear, "End Date", new { @class = "form-label" })
+            <p class="input-group">
+                <input id="txtFiscalYearEndYear" class="form-control" uib-datepicker-popup="yyyy/MM/dd"
+                       ng-model="FiscalYear.EndYear" is-open="popup3.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" name="EndYear"
+                       alt-input-formats="altInputFormats" required="required" style="" type="text">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open3()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+            <span class="text-danger pull-right" ng-show="frmCreateFiscalYear.EndYear.$touched && frmCreateFiscalYear.EndYear.$error.required">End Date is Required.</span>
+            <span class="text-danger pull-right" ng-show="frmCreateFiscalYear.EndYear.$error.date">Not a valid date!</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.EvaluationLength, "Evaluation Length", new { @class = "form-label" })
+            <input id="txtFiscalYearEvaluationLength" required ng-model="FiscalYear.EvaluationLength" name="EvaluationLength" type="number" placeholder="Select Evaluation Length" class="form-control" />
+            <span class="text-danger pull-right" ng-show="frmCreateFiscalYear.EvaluationLength.$touched && frmCreateFiscalYear.EvaluationLength.$error.required">Evaluation Length is Required.</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, new { @class = "form-label" })
+            <textarea id="txtFiscalYearDescription" required ng-model="FiscalYear.Description" name="Description" rows="3" ng-maxlength="300" placeholder="Enter Description..." class="form-control"></textarea>
+            <span class="text-danger pull-right" ng-show="frmCreateFiscalYear.Description.$touched && frmCreateFiscalYear.Description.$error.required">Description is Required.</span>
+            <span class="text-danger pull-right" ng-show="frmCreateFiscalYear.Description.$error.maxlength">Max. Leangth 1500</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsActive, new { @class = "form-label" })
+            <input id="chkFiscalYearIsActive" ng-model="FiscalYear.IsActive" name="IsActive" type="checkbox" class="checkbox" />
+        </div>
+    </form>
+</div>
+<div class="box-footer">
+    <input type="reset" id="btnCancel" value="Cancel" class="btn" ng-click="Clear()">
+    <input type="button" id="btnSave" name="btnSave" value="Save" class="btn btn-info pull-right" ng-click="Save()" ng-disabled="frmCreateFiscalYear.$invalid">
+</div>

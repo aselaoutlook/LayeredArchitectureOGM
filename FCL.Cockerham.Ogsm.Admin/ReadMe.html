@@ -1,0 +1,232 @@
+﻿<html><head>
+  <meta charset="utf-8">
+  <title>Codeply preview</title>
+  <base target="_self">
+  <meta content="Codeply is a free code editor online for Web developers and designers." name="description">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta value="notranslate" name="google">
+  <link href="/img/codeply_ico.jpg" rel="shortcut icon">
+  <!-- <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"> -->
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!--stylesheets / link tags loaded here-->
+
+  
+</head>
+<body
+    <div class="navbar navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">FCL Web Framework</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Dashboard</a>
+                    </li>
+                    <li><a href="#">Settings</a>
+                    </li>
+                    <li><a href="#">Profile</a>
+                    </li>
+                    <li><a href="#">Help</a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+            </div>
+        </div>
+    </div>
+ <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                 <div class="tabbable">
+                    <ul class="nav nav-pills nav-stacked col-md-3">
+						<li class="active"><a href="#getting-started" data-toggle="tab">Getting Started</a>
+						</li>
+						<li><a href="#auditing" data-toggle="tab">Data Auditing</a>
+						</li>
+						<li><a href="#permissions" data-toggle="tab">User Permissions</a>
+						</li>
+						<li><a href="#extentions" data-toggle="tab">Razor Extensions</a>
+						</li>						
+                    </ul>
+
+                    <div class="tab-content col-md-9">
+                        <div class="tab-pane" id="getting-started">
+						<h3>Managed Extensibility Framework (MEF)</h3>
+						<p>
+							<span class="label label-warning">Note</span></p>
+                            <p>
+                                FCL Web Framework is based on MEF. Before start using the framework, it is highly advised to read about MEF.
+                                <ul>
+                                    <li>
+                                        <a href="https://msdn.microsoft.com/en-us/library/dd460648(v=vs.110).aspx">https://msdn.microsoft.com/en-us/library/dd460648%28v=vs.110%29.aspx</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://kishore1021.wordpress.com/window-8-winrt/in-depth-analysis-of-mef-architecture/">https://kishore1021.wordpress.com/window-8-winrt/in-depth-analysis-of-mef-architecture/</a>
+                                    </li>
+                                </ul>
+							
+							
+						</p>
+						<h3>Naming Projects &amp; Namespaces</h3>
+						<p>Framework has to be renamed to align with the project you work. Below steps brief what you need to carry out before start actual coding for client.</p>
+						<blockquote>
+							<span class="label label-info">Note</span>
+							<p>
+								<br/>							
+								ReSharper tool can perform much of the below steps in few clicks
+								<br/>
+							</p>
+							<a href="https://www.jetbrains.com/resharper/"><small>Jet Brains claims</small></a>
+						</blockquote>
+						<p>
+
+						</p>
+						<ol class="pg-empty-placeholder">
+							<li>Change solution name to FCL.Cockerham.Ogsm. Ex:- FCL.Web.Framework = FCL.Client.Project Go to properties in solutions to change</li>
+							<li>Change namespaces of each project that is named as FCL.Cockerham.Ogsm.xxxx Ex:- FCL.Cockerham.Ogsm.Admin = FCL.Microsoft.SharePoint.Admin
+								<ol>
+									<li>Go to properties in project and change project file</li>
+									<li>Right click project, properties, Application tab change assembly name and default namespace Keep Client.Project part simple and not too long.</li>
+								</ol>
+							</li>
+							<li>Change directory names of each project to match with above guidelines. Ex:- After you change FCL.Web.Framework.Admin project as in step 2
+								<ol>
+									<li>remove the project from solution and rename the FCL.Web.Framework.Admin directory to FCL.Cockerham.Ogsm.Admin</li>
+									<li>Re add the project to solution from the renamed directory</li>
+								</ol>
+							</li>
+							<li>Namespaces in class files must be updated to match with the above changes</li>
+							<li>Update AssemblyInfo (in AssemblyInfo.cs) details as necessary</li>
+						</ol>
+						<blockquote><span class="label label-warning">Attention</span>
+							<p>If you are adding any functionality that can be included into the framework (not client specific) make sure you follow project naming and namespace naming guidelines. Ex:- <strong>FCL.Web.Framework</strong>.XXXXXX
+								<br>
+							</p> <small>FCL</small>
+						</blockquote>
+                        </div>
+
+                        <div class="tab-pane" id="auditing">
+						<h3>Auditing Framework</h3>
+						<p>
+							<span class="label label-warning">Note</span></p>
+                            <p>
+                                Framework has a built in auditing module. This audits every change that happense in the database.
+
+                                Main classes/interface for auditing are as below;
+                                <ul>
+                                    <li>FCL.Web.Framework.Core.Common.Contracts\IAuditableEntity.cs - Primary interface which provides a property for entities to control whether auditing should happen or not. By default every entity gets audited.<br />
+                                        <br />
+                                    </li>
+                                    <li>FCL.Cockerham.Ogsm.Data.Contracts\Repository Interfaces\IAuditRepository.cs - Provides methods to interace with audit table. By default it exposes a single method where it returns ALL records in audit table.<br />
+                                        <br />
+                                    </li>
+                                    <li>FCL.Web.Framework.Core.Common\Core\EntityBase.cs - Implements IAuditableEntity so that all entities by default gets AuditChanges property.<br />
+                                        <br />
+                                    </li>
+                                    <li>FCL.Web.Framework\FCL.Cockerham.Ogsm.Entities\Audit.cs - Represents the Audit table in DB<br />
+                                        <br />
+                                    </li>
+                                    <li>FCL.Cockerham.Ogsm.Data\FclDBContext.cs - Contains the logic that performs the actual auditing work. This has overriden the <strong>SaveChanges </strong>method. This checks whether the incoming entity has auditing enabled (AuditChanges property). If enabled it collects all the data and save those to Audit table.<br />
+                                    </li>
+                                    <li>FCL.Cockerham.Ogsm.Admin\Views\Audit\Index.cshtml - Has a sample table to display audited data. You can customize this as you wish.</li>
+                                </ul>
+                            <p>
+                                All audit data are written to <strong>Audit</strong> table having below structure<br />
+                                <br />
+                                AuditId | EventDate | Table | Action | User | RecordID | Old Data | New Data<br />
+                                <br />
+                                All the audit related data is written as a JSON string to RecordID, Old Data &amp; New Data fields.</p>
+                            <h4>
+                                How to use                        How to use</h4>
+                            <p>
+                                By default auditing is enabled for every entity. However if you want to disable auditing for a particular entity you have to explicitly disable it by <strong>[Entity].AuditChanges = false;</strong></p>
+                        </div>
+
+                        <div class="tab-pane" id="permissions">
+						
+                        </div>
+                        <div class="tab-pane active" id="extentions">
+                        <h3>Template Editor Extention</h3>
+						<p>
+							
+                            <p>
+                                Template editor can be used to allow customers to edit their email templates. This is built to use with <a href="http://aboutcode.net/postal/">Postal</a> where you can create email templates in razor sytax.
+                                <p>
+                            This extention uses a customized HTML editor by <a href="http://summernote.org/">summernote</a>
+                            <p>
+                                Below are the files in use for this extention<ul>
+                                    <li>FCL.Cockerham.Ogsm.Admin\Content\summernote.css - Styles used by the rich text editor.<br/>
+                                        <br/>
+                                    </li>
+                                    <li>FCL.Cockerham.Ogsm.Admin\Scripts\summernote.js - Customized version of the core summer note editor.<br/>
+                                        <br/>
+                                    </li>
+                                    <li>FCL.Web.Framework.Core.RazorExtentions\template-editor.js - Implementation of summernote editor at client end.<br/>
+                                        <br/>
+                                    </li>
+                                    <li>FCL.Web.Framework\FCL.Cockerham.Ogsm.Entities\Audit.cs - Represents the Audit table in DB<br/>
+                                        <br/>
+                                    </li>
+                                    <li>FCL.Web.Framework.Core.RazorExtentions\TemplateEditorScript.resx - Contains the above script as a resource.<br/>
+                                    </li>
+                                    <li>FCL.Web.Framework.Core.RazorExtentions\TemplateEditorExtension.cs - HTML Helper class hiding the complexities</li>
+                                    <li>FCL.Cockerham.Ogsm.Admin\Views\TemplateEditor\Index.cshtml - Example implementation of the template editor.</li>
+                                </ul>
+                                <h4>
+                                    How to use</h4>
+                                <p>
+                                    @(Html.TemplateEditorFor().EditorId(&quot;summernote&quot;)<br/>
+                                    &nbsp;&nbsp;&nbsp; .EditorClasses(&quot;1 2 3&quot;) .Height(300)<br/>
+                                    &nbsp;&nbsp;&nbsp; .EditorMaxHeight(350)<br/>
+                                    &nbsp;&nbsp;&nbsp; .IsTemplateEditor(true)<br/>
+                                    &nbsp;&nbsp;&nbsp; .TagRegxp("@View\\w+\\w+")<br/>
+                                    &nbsp;&nbsp;&nbsp; .SaveTemplateCallback(&quot;console.log(savedData)&quot;)<br/>
+                                    &nbsp;&nbsp;&nbsp; .ResetTemplateCallback(&quot;console.log(&#39;reset&#39;)&quot;)
+                                    <br/>
+                                    &nbsp;&nbsp;&nbsp; .ToHtml());
+                                </p>
+                                <p>
+                                    Above code will render all the scripts required for the editor to work.</p>
+                                <span class="label label-warning">Note</span>
+                            <br />
+                            &nbsp;<ul>
+                                <li>
+                                    <strong>IsTemplateEditor</strong> - If set to false, renders a generic rich text editor<br />
+                                    <br />
+                                </li>
+                                <li>
+                                    <strong>TagRegXP</strong> - A valid javascript regular expression that will be used to parse incoming template data and highlight user tags. For example, if you are using Postal.net razor files for email templates, each placeholder can be specified by <strong>@ViewBag.Property</strong>. So for you to extract all these variable data and make a place holder, you can provide a regular expression. By default it is set to <strong>@View\\w+\\w+</strong> which will find all <strong>@ViewBag.Property</strong> placeholders and convert them to tags in the richtext editor.<br />
+                                </li>
+                                <li>
+                                    <strong>&nbsp;SaveTemplateCallback</strong> - This gets called when user clicks the [Save Template] button. You will get the updated template data via the call back.<br />
+                                </li>
+                                <li>
+                                    <strong>ResetTemplateCallback</strong> - Gets called when user clicks the [ResetTemplateCallback] button. You might want to use this to reset the template data.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- /tabs -->
+            </div>
+        </div><!-- /row -->
+    </div>
+ 
+  
+  <!--scripts loaded here-->
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+
+
+
+</body></html>

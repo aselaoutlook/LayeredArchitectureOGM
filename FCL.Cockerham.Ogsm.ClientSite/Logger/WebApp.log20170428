@@ -1,0 +1,184 @@
+{ERROR}28/04/2017 14:34:04 - An error occurred while updating the entries. See the inner exception for details.
+System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The conversion of a datetime2 data type to a datetime data type resulted in an out-of-range value.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.Add(TEntity t) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 274
+   at FCL.Cockerham.Ogsm.Domain.FiscalYearService.CreateFiscalYear(FiscalYearDto _fiscalYear, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\FiscalYearService.cs:line 20
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.FiscalYearApiController.Post(FiscalYearDto fiscalYear) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\FiscalYearApiController.cs:line 125
+{ERROR}28/04/2017 14:36:26 - An error occurred while updating the entries. See the inner exception for details.
+System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The conversion of a datetime2 data type to a datetime data type resulted in an out-of-range value.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.Add(TEntity t) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 274
+   at FCL.Cockerham.Ogsm.Domain.FiscalYearService.CreateFiscalYear(FiscalYearDto _fiscalYear, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\FiscalYearService.cs:line 20
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.FiscalYearApiController.Post(FiscalYearDto fiscalYear) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\FiscalYearApiController.cs:line 125
+{ERROR}28/04/2017 14:39:26 - An error occurred while updating the entries. See the inner exception for details.
+System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The conversion of a datetime2 data type to a datetime data type resulted in an out-of-range value.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.Add(TEntity t) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 274
+   at FCL.Cockerham.Ogsm.Domain.FiscalYearService.CreateFiscalYear(FiscalYearDto _fiscalYear, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\FiscalYearService.cs:line 20
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.FiscalYearApiController.Post(FiscalYearDto fiscalYear) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\FiscalYearApiController.cs:line 125
+{ERROR}28/04/2017 15:49:12 - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Goal_3093F28C1873C53B630487CF7EB2155277FB4DF6F22951C0387A1F514F3E869B -> GoalCategoryDto
+System.Data.Entity.DynamicProxies.Goal_3093F28C1873C53B630487CF7EB2155277FB4DF6F22951C0387A1F514F3E869B -> FCL.Cockerham.Ogsm.Entities.DTOs.GoalCategoryDto
+
+Destination path:
+ICollection`1[0].ActionPlans0[0].ActionPlans0[0].ActionPlans0[0].StrategicDriver0[0].StrategicDriver0[0].CalendarEvents0[0].CalendarEvents0[0].CalendarEvents0[0].Goal0[0].Goal0[0]
+
+Source value:
+System.Data.Entity.DynamicProxies.Goal_3093F28C1873C53B630487CF7EB2155277FB4DF6F22951C0387A1F514F3E869B
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Goal_3093F28C1873C53B630487CF7EB2155277FB4DF6F22951C0387A1F514F3E869B -> GoalCategoryDto
+System.Data.Entity.DynamicProxies.Goal_3093F28C1873C53B630487CF7EB2155277FB4DF6F22951C0387A1F514F3E869B -> FCL.Cockerham.Ogsm.Entities.DTOs.GoalCategoryDto
+
+Destination path:
+ICollection`1[0].ActionPlans0[0].ActionPlans0[0].ActionPlans0[0].StrategicDriver0[0].StrategicDriver0[0].CalendarEvents0[0].CalendarEvents0[0].CalendarEvents0[0].Goal0[0].Goal0[0]
+
+Source value:
+System.Data.Entity.DynamicProxies.Goal_3093F28C1873C53B630487CF7EB2155277FB4DF6F22951C0387A1F514F3E869B
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.EnumerableMapperBase`1.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.CollectionMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.EnumerableMapperBase`1.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.CollectionMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap)
+   at AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.Mappers.EnumerableMapperBase`1.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.Mappers.CollectionMapper.Map(ResolutionContext context, IMappingEngineRunner mapper)
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.MappingEngine.MapCore(Object source, Type sourceType, Type destinationType, MappingOperationOptions options)
+   at AutoMapper.MappingEngine.Map(Object source, Type sourceType, Type destinationType, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source)
+   at AutoMapper.Mapper.Map[TDestination](Object source)
+   at FCL.Cockerham.Ogsm.Domain.GoalCategoryService.GetAllGoalCategoriesByOrganization(Int64 _organizationId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\GoalCategoryService.cs:line 73
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Goals.Controllers.Api.GoalCategoryApiController.GetAllGoalCategoriesByOrganization() in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Goals\Controllers\Api\GoalCategoryApiController.cs:line 50

@@ -1,0 +1,34 @@
+﻿<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">StType List</h3>
+    </div>
+    <div id="gridContent" class="box-body">
+        <table id="tblStTypes" class="table table-bordered table-striped" ng-table="stTypeVm.tableParams">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>                   
+                    <th>Active</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="stType in $data">
+                    <td data-title="'Name'">{{stType.Name}}</td>
+                    <td data-title="'Description'">{{stType.Description}}</td>
+                    @*<td data-title="'Business Unit'">{{stType.BusinessUnit.Name}}</td>*@
+                    <td data-title="'Is Active'">{{stType.IsActive ? "Yes":"No"}}</td>
+                    <td data-title="'Edit'">
+                        <button type="button"
+                                class="btn btn-default btn-xs pull-right"
+                                ng-click="LoadById(stType.StTypeId)">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        @Resources.SystemResources.Common_webgrid_row_count_text <span id="rowCount">{{stTypeVm.tableParams.total()}}</span>
+    </div>
+</div>

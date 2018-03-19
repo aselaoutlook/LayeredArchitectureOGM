@@ -1,0 +1,29 @@
+﻿<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">Goal Category List</h3>
+    </div>
+    <div id="gridContent" class="box-body">
+        <table id="tblGoalCategories" class="table table-bordered table-striped" ng-table="goalCategoryVm.tableParams">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="goalCategory in $data">
+                    <td data-title="'Name'">{{goalCategory.Name}}</td>
+                    <td data-title="'Edit'">
+                        <button type="button"
+                                class="btn btn-default btn-xs pull-right"
+                                ng-click="LoadById(goalCategory.GoalCategoryId)">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        @Resources.SystemResources.Common_webgrid_row_count_text <span id="rowCount">{{goalCategoryVm.tableParams.total()}}</span>
+    </div>
+</div>

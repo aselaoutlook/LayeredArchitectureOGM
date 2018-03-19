@@ -1,0 +1,18 @@
+{ERROR}19/02/2018 16:57:57 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 331
+{ERROR}19/02/2018 16:58:32 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 331
+{ERROR}19/02/2018 16:58:42 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 331
+{ERROR}19/02/2018 17:04:08 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 370
+{ERROR}19/02/2018 17:04:47 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 370
+{ERROR}19/02/2018 17:04:59 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 370

@@ -1,0 +1,142 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.ActionPlanDto
+
+<script type="text/ng-template" id="editActionPlan.html">
+    
+    <div class="box-header with-border modal-header">
+        <h3 class="box-title">Edit Action Plan</h3>
+    </div>
+    <div class="modal-body">
+        <form id="frmCreateActionPlan" name="frmCreateActionPlan" class="css-form">
+            <div class="box-body">
+                <input type="hidden" ng-model="StrategicDriver.StrategicDriverId" name="txtGoalId" id="txtStrategicDriverId" />
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Pillar, "Pillar", new { @class = "form-label" })
+                        <select id="ddlPillarId" name="ddlPillarId" required ng-model="ActionPlan.PillarId" class="form-control"
+                                ng-change="LoadGoal()" disabled="disabled" ng-options="pillar.Name for pillar in ApPillar track by pillar.PillarId">
+                            <option value="">Select Pillar</option>
+                        </select>
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.ddlPillarId.$touched && frmCreateActionPlan.ddlPillarId.$error.required">Select Pillar</span>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.GoalId, "Goal", new { @class = "form-label" })
+                        <select id="ddlGoalId" name="ddlGoalId" ng-disabled="!Goal" ng-required="true" ng-model="ActionPlan.GoalId" class="form-control"
+                                ng-change="LoadStrategicDriver()" ng-options="goal.Name for goal in ApGoal track by goal.GoalId">
+                            <option value="">Select Goal</option>
+                        </select>
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.ddlgoalId.$touched && frmCreateActionPlan.ddlgoalId.$error.required">Select Goal</span>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.StrategicDriverId, "Strategic Driver", new { @class = "form-label" })
+                        <select id="ddlStrategicDriverId" name="ddlStrategicDriverId" ng-disabled="!StrategicDriver" ng-required="true" ng-model="ActionPlan.StrategicDriverId" class="form-control"
+                                ng-change="LoadSelectedStrategicDriver()" ng-options="strategicDriver.Name for strategicDriver in ApStrategicDriver track by strategicDriver.StrategicDriverId">
+                            <option value="">Select Strategic Driver</option>
+                        </select>
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.ddlStrategicDriverId.$touched && frmCreateActionPlan.ddlStrategicDriverId.$error.required">Select Strategic Driver</span>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.StrategicDriver.StartDate, new { @class = "form-label" })
+                        <input id="txtStrategicDriverStartDate" ng-model="ApStrategicDriver.StartDate" disabled="disabled" name="StartDate" type="text" ng-minlength="2" ng-maxlength="300" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.StrategicDriver.EndDate, new { @class = "form-label" })
+                        <input id="txtStrategicDriverEndDate" ng-model="ApStrategicDriver.EndDate" disabled="disabled" name="EndDate" type="text" ng-minlength="2" ng-maxlength="300" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name, new { @class = "form-label" })
+                        <input id="txtActionPlanName" required ng-model="ActionPlan.Name" name="Name" type="text" ng-minlength="2" ng-maxlength="300" placeholder="Enter ActionPlan Name" class="form-control" />
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.Name.$touched && frmCreateActionPlan.Name.$error.required">ActionPlan Name is Required.</span>
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.Name.$error.minlength">Min. Leangth 2</span>
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.Name.$error.maxlength">Min. Leangth 300</span>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IsEvent, new { @class = "form-label" })
+                        <input id="chkActionPlanIsEvent" ng-model="ActionPlan.IsEvent" name="IsEvent" type="checkbox" class="checkbox" />
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IsCalendarEvent, new { @class = "form-label" })
+                        <input id="chkActionPlanIsCalendarEvent" ng-model="ActionPlan.IsCalendarEvent" name="IsCalendarEvent" type="checkbox" class="checkbox" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ActionPlanOwner, new { @class = "form-label" })
+                        <select id="ddlOwnerId" name="ddlOwnerId" required ng-model="ActionPlan.ActionPlanOwnerId" class="form-control"
+                                ng-change="LoadActiveGoalOwners()" ng-options="owner.FirstName + ' ' + owner.LastName for owner in ApOwners track by owner.UserId">
+                            <option value="">Select Action Plan Owner</option>
+                        </select>
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.ddlOwnerId.$touched && frmCreateActionPlan.ddlOwnerId.$error.required">Select Action Plan Owner</span>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DueDate, new { @class = "form-label" })
+                        <p class="input-group">
+                            <input id="txtDueDate" ng-model="ActionPlan.DueDate" name="DueDate" type="date"
+                                   placeholder="yyyy-mm-dd" class="form-control" uib-datepicker-popup
+                                   is-open="popup2.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions"
+                                   date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </p>
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.DueDate.$touched && frmCreateActionPlan.DueDate.$error.required">Due Date is Required.</span>
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.DueDate.$error.date">Not a valid date!</span>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PlannedCost, new { @class = "form-label" })
+                        <input id="txtPlannedCost" required ng-model="ActionPlan.PlannedCost" name="PlannedCost" type="number" placeholder="Enter Planned Cost" class="form-control" />
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.PlannedCost.$touched && frmCreateActionPlan.PlannedCost.$error.required">Planned Cost is Required.</span>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ActualCost, new { @class = "form-label" })
+                        <input id="txtActualCost" required ng-model="ActionPlan.ActualCost" name="ActualCost" type="number" placeholder="Enter Actual Cost" class=" form-control" />
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.ActualCost.$touched && frmCreateActionPlan.ActualCost.$error.required">Actual Cost is Required.</span>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Impact, new { @class = "form-label" })
+                        <input id="txtImpact" required ng-model="ActionPlan.Impact" name="Impact" type="number" placeholder="Enter Impact" class=" form-control" />
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.Impact.$touched && frmCreateActionPlan.Impact.$error.required">Impact is Required.</span>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.SequenceNumber, new { @class = "form-label" })
+                        <input id="txtSequenceNumber" required ng-model="ActionPlan.SequenceNumber" name="SequenceNumber" type="number" placeholder="Sequence Number" class="form-control" />
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.SequenceNumber.$touched && frmCreateActionPlan.SequenceNumber.$error.required">SequenceNumber is Required.</span>
+                    </div>
+                    <div class="form-group">
+                        @Html.Label("Action Plan Comment", new { @class = "form-label" })
+                        <textarea id="txtActionPlanComment" ng-model="ActionPlan.ActionPlanComments[0].Comment" name="ActionPlanComment" type="text" placeholder="Enter Action PlanC omment" class="form-control"></textarea>
+                    </div>
+
+                </div>
+            </div>
+            <div class="box-header with-border" ng-show="ActionPlan.IsCalendarEvent">
+                <h3 class="box-title">Calendar Event Details</h3>
+            </div>
+            <div class="box-body" ng-show="ActionPlan.IsCalendarEvent">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.Label("Event Calender Name", new { @class = "form-label" })
+                        <input id="txtCalenderName" required ng-model="ActionPlan.CalendarEvents[0].Name" name="CalenderName" type="text" placeholder="Enter CalenderName" class="form-control" />
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.CalenderName.$touched && frmCreateActionPlan.CalenderName.$error.required">Calender Name Length is Required.</span>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label("Event Calender Description", new { @class = "form-label" })
+                        <input id="txtCalenderDescription" required ng-model="ActionPlan.CalendarEvents[0].Description" name="CalenderDescription" type="text" placeholder="Enter Calender Description" class="form-control" />
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.CalenderDescription.$touched && frmCreateActionPlan.CalenderDescription.$error.required">Calender Description Length is Required.</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.Label("Event Calender Location", new { @class = "form-label" })
+                        <input id="txtCalenderLocation" required ng-model="ActionPlan.CalendarEvents[0].Location" name="CalenderLocation" type="text" placeholder="Enter Calender Location" class="form-control" />
+                        <span class="text-danger pull-right" ng-show="frmCreateActionPlan.CalenderLocation.$touched && frmCreateActionPlan.CalenderLocation.$error.required">Calender Location Length is Required.</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="box-footer modal-footer">
+        <button type="button" class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        <input type="button" id="btnSave" name="btnSave" value="Save" class="btn btn-info pull-right" ng-click="Save()" ng-disabled="frmCreateActionPlan.$invalid">
+    </div>
+</script>

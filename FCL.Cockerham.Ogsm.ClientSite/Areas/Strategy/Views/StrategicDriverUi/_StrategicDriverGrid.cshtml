@@ -1,0 +1,52 @@
+﻿<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">Strategic Driver List</h3>
+    </div>
+    <div id="gridContent" class="box-body">
+        <table id="tblStrategicDriver" class="table table-bordered table-striped" ng-table="strategicDriverVm.tableParams">
+            <thead>
+                <tr>
+                    <th>Pillar</th>
+                    <th>Goal</th>
+                    <th>Name</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Metric</th>
+                    <th>Metric Target</th>
+                    <th>Weight Action Plan</th>
+                    <th>Weight Metric</th>
+                    <th>Owner</th>
+                    <th>Is Metric Default</th>
+                    <th>Is Indexed</th>
+                    <th>Active</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="strategicDriver in $data">
+                    <td data-title="'Goal Category'">{{strategicDriver.Pillar.Name}}</td>
+                    <td data-title="'Goal'">{{strategicDriver.Goal.Name}}</td>
+                    <td data-title="'Name'">{{strategicDriver.Name}}</td>
+                    <td data-title="'Strat Date'">{{strategicDriver.StartDate | date:'shortDate'}}</td>
+                    <td data-title="'End Date'">{{strategicDriver.EndDate | date:'shortDate'}}</td>
+                    <td data-title="'Metric'">{{strategicDriver.Metric}}</td>
+                    <td data-title="'Metric Target'">{{strategicDriver.MetricTarget}}</td>
+                    <td data-title="'Weight Action Plan'">{{strategicDriver.WeightActionPlan}}</td>
+                    <td data-title="'Weight Metric'">{{strategicDriver.WeightMetric}} </td>
+                    <td data-title="'Primary Owner'">{{strategicDriver.Owner.FirstName}}&nbsp;{{strategicDriver.Owner.LastName}}</td>
+                    <td data-title="'Is Metric Default'">{{strategicDriver.IsMetricDefault}}</td>
+                    <td data-title="'Is Indexed'">{{strategicDriver.IsIndexed}}</td>
+                    <td data-title="'Is Active'">{{strategicDriver.IsActive ? "Yes":"No"}}</td>
+                    <td data-title="'Edit'">
+                        <button type="button"
+                                class="btn btn-default btn-xs pull-right"
+                                ng-click="LoadById(strategicDriver.StrategicDriverId)">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        @Resources.SystemResources.Common_webgrid_row_count_text <span id="rowCount">{{strategicDriverVm.tableParams.total()}}</span>
+    </div>
+</div>

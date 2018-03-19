@@ -1,0 +1,135 @@
+{ERROR}22/02/2017 15:43:22 - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+BusinessUnitDto -> BusinessUnit
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto -> FCL.Cockerham.Ogsm.Entities.BusinessUnit
+
+Destination path:
+BusinessUnit
+
+Source value:
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+BusinessUnitDto -> BusinessUnit
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto -> FCL.Cockerham.Ogsm.Entities.BusinessUnit
+
+Destination path:
+BusinessUnit
+
+Source value:
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.MappingEngine.MapCore(Object source, Type sourceType, Type destinationType, MappingOperationOptions options)
+   at AutoMapper.MappingEngine.Map(Object source, Type sourceType, Type destinationType, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source)
+   at AutoMapper.Mapper.Map[TDestination](Object source)
+   at FCL.Cockerham.Ogsm.Domain.BusinessUnitService.UpdateBusinessUnit(BusinessUnitDto _businessUnit, Int64 _businessUnitId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\BusinessUnitService.cs:line 35
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.BusinessUnitApiController.Put(BusinessUnitDto businessUnit) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\BusinessUnitApiController.cs:line 137
+{ERROR}22/02/2017 15:43:30 - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+BusinessUnitDto -> BusinessUnit
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto -> FCL.Cockerham.Ogsm.Entities.BusinessUnit
+
+Destination path:
+BusinessUnit
+
+Source value:
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+BusinessUnitDto -> BusinessUnit
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto -> FCL.Cockerham.Ogsm.Entities.BusinessUnit
+
+Destination path:
+BusinessUnit
+
+Source value:
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.MappingEngine.MapCore(Object source, Type sourceType, Type destinationType, MappingOperationOptions options)
+   at AutoMapper.MappingEngine.Map(Object source, Type sourceType, Type destinationType, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source)
+   at AutoMapper.Mapper.Map[TDestination](Object source)
+   at FCL.Cockerham.Ogsm.Domain.BusinessUnitService.UpdateBusinessUnit(BusinessUnitDto _businessUnit, Int64 _businessUnitId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\BusinessUnitService.cs:line 35
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.BusinessUnitApiController.Put(BusinessUnitDto businessUnit) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\BusinessUnitApiController.cs:line 137
+{ERROR}22/02/2017 15:46:02 - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+BusinessUnitDto -> BusinessUnit
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto -> FCL.Cockerham.Ogsm.Entities.BusinessUnit
+
+Destination path:
+BusinessUnit
+
+Source value:
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+BusinessUnitDto -> BusinessUnit
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto -> FCL.Cockerham.Ogsm.Entities.BusinessUnit
+
+Destination path:
+BusinessUnit
+
+Source value:
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.MappingEngine.MapCore(Object source, Type sourceType, Type destinationType, MappingOperationOptions options)
+   at AutoMapper.MappingEngine.Map(Object source, Type sourceType, Type destinationType, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source)
+   at AutoMapper.Mapper.Map[TDestination](Object source)
+   at FCL.Cockerham.Ogsm.Domain.BusinessUnitService.UpdateBusinessUnit(BusinessUnitDto _businessUnit, Int64 _businessUnitId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\BusinessUnitService.cs:line 35
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.BusinessUnitApiController.Put(BusinessUnitDto businessUnit) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\BusinessUnitApiController.cs:line 137
+{ERROR}22/02/2017 15:46:34 - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+BusinessUnitDto -> BusinessUnit
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto -> FCL.Cockerham.Ogsm.Entities.BusinessUnit
+
+Destination path:
+BusinessUnit
+
+Source value:
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+BusinessUnitDto -> BusinessUnit
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto -> FCL.Cockerham.Ogsm.Entities.BusinessUnit
+
+Destination path:
+BusinessUnit
+
+Source value:
+FCL.Cockerham.Ogsm.Entities.DTOs.BusinessUnitDto
+   at AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context)
+   at AutoMapper.MappingEngine.MapCore(Object source, Type sourceType, Type destinationType, MappingOperationOptions options)
+   at AutoMapper.MappingEngine.Map(Object source, Type sourceType, Type destinationType, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source, Action`1 opts)
+   at AutoMapper.MappingEngine.Map[TDestination](Object source)
+   at AutoMapper.Mapper.Map[TDestination](Object source)
+   at FCL.Cockerham.Ogsm.Domain.BusinessUnitService.UpdateBusinessUnit(BusinessUnitDto _businessUnit, Int64 _businessUnitId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\BusinessUnitService.cs:line 35
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.BusinessUnitApiController.Put(BusinessUnitDto businessUnit) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\BusinessUnitApiController.cs:line 137
+{ERROR}22/02/2017 16:38:21 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.BusinessUnitApiController.Put(BusinessUnitDto businessUnit) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\BusinessUnitApiController.cs:line 132
+{ERROR}22/02/2017 16:39:44 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.BusinessUnitApiController.Put(BusinessUnitDto businessUnit) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\BusinessUnitApiController.cs:line 132
+{ERROR}22/02/2017 16:39:58 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.BusinessUnitApiController.Put(BusinessUnitDto businessUnit) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\BusinessUnitApiController.cs:line 132
+{ERROR}22/02/2017 16:40:15 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.BusinessUnitApiController.Put(BusinessUnitDto businessUnit) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\BusinessUnitApiController.cs:line 132
+{ERROR}22/02/2017 16:40:17 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.CompanySetup.Controllers.Api.BusinessUnitApiController.Put(BusinessUnitDto businessUnit) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\CompanySetup\Controllers\Api\BusinessUnitApiController.cs:line 132

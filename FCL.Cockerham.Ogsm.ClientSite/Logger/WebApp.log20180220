@@ -1,0 +1,87 @@
+{ERROR}20/02/2018 14:15:01 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 380
+{ERROR}20/02/2018 14:39:56 - The property 'Users' on type 'Role' is not a primitive or complex property. The Property method can only be used with primitive or complex properties. Use the Reference or Collection method.
+System.ArgumentException: The property 'Users' on type 'Role' is not a primitive or complex property. The Property method can only be used with primitive or complex properties. Use the Reference or Collection method.
+   at System.Data.Entity.Internal.InternalEntityEntry.Property(InternalPropertyEntry parentProperty, String propertyName, IList`1 properties, Type requestedType, Boolean requireComplex)
+   at System.Data.Entity.Internal.InternalEntityEntry.Property(String property, Type requestedType, Boolean requireComplex)
+   at System.Data.Entity.Infrastructure.DbEntityEntry`1.Property(String propertyName)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.Update(TEntity t, Int64 key) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 341
+   at FCL.Cockerham.Ogsm.Domain.RoleService.UpdateRole(RoleDto _role, Int64 _roleId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\RoleService.cs:line 76
+   at FCL.Cockerham.Ogsm.Domain.RoleService.AddRoleUser(Int64 roleId, Int64 userId, IUserService _userDomainService, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\RoleService.cs:line 97
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 376
+{ERROR}20/02/2018 14:41:42 - The property 'Users' on type 'User' is not a primitive or complex property. The Property method can only be used with primitive or complex properties. Use the Reference or Collection method.
+System.ArgumentException: The property 'Users' on type 'User' is not a primitive or complex property. The Property method can only be used with primitive or complex properties. Use the Reference or Collection method.
+   at System.Data.Entity.Internal.InternalEntityEntry.Property(InternalPropertyEntry parentProperty, String propertyName, IList`1 properties, Type requestedType, Boolean requireComplex)
+   at System.Data.Entity.Internal.InternalEntityEntry.Property(String property, Type requestedType, Boolean requireComplex)
+   at System.Data.Entity.Infrastructure.DbEntityEntry`1.Property(String propertyName)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.Update(TEntity t, Int64 key) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 340
+   at FCL.Cockerham.Ogsm.Domain.UserService.UpdateUser(UserDto _user, Int64 _userId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\UserService.cs:line 37
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 373
+{ERROR}20/02/2018 14:42:05 - The property 'Users' on type 'User' is not a primitive or complex property. The Property method can only be used with primitive or complex properties. Use the Reference or Collection method.
+System.ArgumentException: The property 'Users' on type 'User' is not a primitive or complex property. The Property method can only be used with primitive or complex properties. Use the Reference or Collection method.
+   at System.Data.Entity.Internal.InternalEntityEntry.Property(InternalPropertyEntry parentProperty, String propertyName, IList`1 properties, Type requestedType, Boolean requireComplex)
+   at System.Data.Entity.Internal.InternalEntityEntry.Property(String property, Type requestedType, Boolean requireComplex)
+   at System.Data.Entity.Infrastructure.DbEntityEntry`1.Property(String propertyName)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.Update(TEntity t, Int64 key) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 340
+   at FCL.Cockerham.Ogsm.Domain.UserService.UpdateUser(UserDto _user, Int64 _userId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\UserService.cs:line 37
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 373
+{ERROR}20/02/2018 15:05:08 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 380
+{ERROR}20/02/2018 15:46:59 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 381
+{ERROR}20/02/2018 15:48:27 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 381
+{ERROR}20/02/2018 15:48:34 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 381
+{ERROR}20/02/2018 15:50:56 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 381
+{ERROR}20/02/2018 17:36:39 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 381
+{ERROR}20/02/2018 17:40:27 - An error occurred while saving entities that do not expose foreign key properties for their relationships. The EntityEntries property will return null because a single entity cannot be identified as the source of the exception. Handling of exceptions while saving can be made easier by exposing foreign key properties in your entity types. See the InnerException for details.
+System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while saving entities that do not expose foreign key properties for their relationships. The EntityEntries property will return null because a single entity cannot be identified as the source of the exception. Handling of exceptions while saving can be made easier by exposing foreign key properties in your entity types. See the InnerException for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Violation of PRIMARY KEY constraint 'PK_dbo.UserRole'. Cannot insert duplicate key in object 'dbo.UserRole'. The duplicate key value is (11, 12).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at FCL.Cockerham.Ogsm.Data.Data_Repositories.UserRepository.UpdateNormal(User t, Int64 key) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\Data Repositories\UserRepository.cs:line 57
+   at FCL.Cockerham.Ogsm.Domain.UserService.UpdateUser(UserDto _user, Int64 _userId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\UserService.cs:line 46
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 374
+{ERROR}20/02/2018 17:46:58 - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 381

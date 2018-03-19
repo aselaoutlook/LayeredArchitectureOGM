@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{594A5D6B-DFE8-47E9-A365-ADBE7F8C1A84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FCL.Cockerham.Ogsm.Domain.Contracts</RootNamespace>
+    <AssemblyName>FCL.Cockerham.Ogsm.Domain.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IActionStatusService.cs" />
+    <Compile Include="IAppSettingBaseService.cs" />
+    <Compile Include="IActionPlanCommentService.cs" />
+    <Compile Include="IActionPlanService.cs" />
+    <Compile Include="IAppSettingService.cs" />
+    <Compile Include="ICalendarEventService.cs" />
+    <Compile Include="ICountryService.cs" />
+    <Compile Include="ICsfService.cs" />
+    <Compile Include="IDisplayBaseService.cs" />
+    <Compile Include="IDisplayNameService.cs" />
+    <Compile Include="IEmployeeService.cs" />
+    <Compile Include="IFiscalYearService.cs" />
+    <Compile Include="IBusinessUnitService.cs" />
+    <Compile Include="IStTypeService.cs" />
+    <Compile Include="IGlobalRegionService.cs" />
+    <Compile Include="IGoalCategoryService.cs" />
+    <Compile Include="IGoalService.cs" />
+    <Compile Include="IGoalTargetService.cs" />
+    <Compile Include="ILocationService.cs" />
+    <Compile Include="IOrganizationService.cs" />
+    <Compile Include="IPillarService.cs" />
+    <Compile Include="IRoleService.cs" />
+    <Compile Include="IScorecardPerspectiveService.cs" />
+    <Compile Include="IStateService.cs" />
+    <Compile Include="IStrategicDriverService.cs" />
+    <Compile Include="IStrategicDriverTargetService.cs" />
+    <Compile Include="ITemplateService.cs" />
+    <Compile Include="IUserService.cs" />
+    <Compile Include="IPermissionService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FCL.Cockerham.Ogsm.Data.Contracts\FCL.Cockerham.Ogsm.Data.Contracts.csproj">
+      <Project>{0ce9a5ee-3eb2-4a4b-9c75-9ff7137b850a}</Project>
+      <Name>FCL.Cockerham.Ogsm.Data.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FCL.Cockerham.Ogsm.Entities\FCL.Cockerham.Ogsm.Entities.csproj">
+      <Project>{352238b5-aae4-4db5-9971-37cfe29c5fb0}</Project>
+      <Name>FCL.Cockerham.Ogsm.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FCL.Web.Framework.Core.Common.Contracts\FCL.Web.Framework.Core.Common.Contracts.csproj">
+      <Project>{7fa28708-01dc-4f0a-ad0e-b8ed4a6a1736}</Project>
+      <Name>FCL.Web.Framework.Core.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FCL.Web.Framework.Core.Common\FCL.Web.Framework.Core.Common.csproj">
+      <Project>{8ecaa795-b67c-4d3a-a22c-464f71f42454}</Project>
+      <Name>FCL.Web.Framework.Core.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

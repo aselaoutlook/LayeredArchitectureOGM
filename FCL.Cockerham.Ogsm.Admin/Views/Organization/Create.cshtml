@@ -1,0 +1,123 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.OrganizationDto
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Create", "Organization", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="panel panel-primary table-responsive">
+        <div class="panel-heading">
+            Create Organization
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped table-hover" style="width:80%;">
+                <tr>
+                    <td colspan="2" style="border:none;">
+                        @Html.ValidationSummary(true)
+                    </td>
+                </tr>
+                <tr>
+                    <td style='width: 10%; font-weight: bold' class='userTable'>
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    </td>
+                    <td class='userTable'>
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style='width: 10%; font-weight: bold' class='userTable'>
+                        @Html.LabelFor(model => model.AddressOne, htmlAttributes: new { @class = "control-label col-md-2" })
+                    </td>
+                    <td class='userTable'>
+                        @Html.EditorFor(model => model.AddressOne, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AddressOne, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style='width: 10%; font-weight: bold' class='userTable'>
+                        @Html.LabelFor(model => model.AddressTwo, htmlAttributes: new { @class = "control-label col-md-2" })
+                    </td>
+                    <td class='userTable'>
+                        @Html.EditorFor(model => model.AddressTwo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AddressTwo, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style='width: 10%; font-weight: bold' class='userTable'>
+                        @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
+                    </td>
+                    <td class='userTable'>
+                        @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style='width: 10%; font-weight: bold' class='userTable'>
+                        @Html.LabelFor(model => model.State, "State", htmlAttributes: new { @class = "control-label col-md-2" })
+                    </td>
+                    <td class='userTable'>
+                        @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                    </td>
+                </tr>                
+
+                <tr>
+                    <td style='width: 10%; font-weight: bold' class='userTable'>
+                        @Html.LabelFor(model => model.Zip, htmlAttributes: new { @class = "control-label col-md-2" })
+                    </td>
+                    <td class='userTable'>
+                        @Html.EditorFor(model => model.Zip, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Zip, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style='width: 10%; font-weight: bold' class='userTable'>
+                        @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                    </td>
+                    <td class='userTable'>
+                        @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style='width: 10%; font-weight: bold' class='userTable'>
+                        @Html.LabelFor(model => model.Logo, htmlAttributes: new { @class = "control-label col-md-2" })
+                    </td>
+                    <td class='userTable'>
+                        <input type="file" name="file" multiple="multiple" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style='width: 10%; font-weight: bold' class='userTable'>
+                        @Html.LabelFor(model => model.IsActive, "IsActive", htmlAttributes: new { @class = "control-label col-md-2" })
+                    </td>
+                    <td class='userTable'>
+                        @Html.CheckBoxFor(model => model.IsActive)
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="panel-footer">
+            <input type="submit" value="Create" class="btn btn-primary" />
+            &nbsp;&nbsp;
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

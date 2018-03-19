@@ -1,0 +1,40 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.GoalCategoryDto
+
+@{
+    ViewBag.Title = "Stratus OGSM - Client Portal Goal Setup - Goal Category";
+}
+
+<script src="~/Scripts/App/GoalSetup/GoalCategory/GoalCategory.js"></script>
+
+<section class="content-header">
+    <h1>
+        Goal Setup - Goal Category
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li class="active">Goal Setup - Goal Category</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="col-lg-12 ">
+        <div>
+            <div ng-controller="GoalCategoryViewModel as goalCategoryVm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box box-success">
+                            @Html.Partial("_CreateGoalCategory", @Model)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        @Html.Partial("_GoalCategoryGrid")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->
+
+

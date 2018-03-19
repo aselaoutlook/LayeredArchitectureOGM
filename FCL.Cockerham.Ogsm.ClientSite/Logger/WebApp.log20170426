@@ -1,0 +1,93 @@
+{ERROR}26/04/2017 10:52:53 - The entity type UserDto is not part of the model for the current context.
+System.InvalidOperationException: The entity type UserDto is not part of the model for the current context.
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetSingle(Expression`1 filter, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 89
+   at FCL.Cockerham.Ogsm.Domain.UserService.GetUserByUsername(String _username, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\UserService.cs:line 60
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Login.Controllers.AccountController.Validate() in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Login\Controllers\AccountController.cs:line 33
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}26/04/2017 10:55:32 - The entity type UserDto is not part of the model for the current context.
+System.InvalidOperationException: The entity type UserDto is not part of the model for the current context.
+   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetSingle(Expression`1 filter, String includeProperties) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 89
+   at FCL.Cockerham.Ogsm.Domain.UserService.GetUserByUsername(String _username, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\UserService.cs:line 60
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Login.Controllers.AccountController.Validate() in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Login\Controllers\AccountController.cs:line 33
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}26/04/2017 12:19:26 - Attaching an entity of type 'FCL.Cockerham.Ogsm.Entities.User' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+System.InvalidOperationException: Attaching an entity of type 'FCL.Cockerham.Ogsm.Entities.User' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+   at System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   at System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClassa.<Attach>b__9()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   at System.Data.Entity.DbSet`1.Attach(TEntity entity)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.Update(TEntity t) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 301
+   at FCL.Cockerham.Ogsm.Domain.UserService.UpdateUser(UserDto _user, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\UserService.cs:line 29
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 287
+{ERROR}26/04/2017 12:20:03 - Attaching an entity of type 'FCL.Cockerham.Ogsm.Entities.User' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+System.InvalidOperationException: Attaching an entity of type 'FCL.Cockerham.Ogsm.Entities.User' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+   at System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   at System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClassa.<Attach>b__9()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   at System.Data.Entity.DbSet`1.Attach(TEntity entity)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.Update(TEntity t) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 301
+   at FCL.Cockerham.Ogsm.Domain.UserService.UpdateUser(UserDto _user, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\UserService.cs:line 29
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 287
+{ERROR}26/04/2017 12:21:04 - Attaching an entity of type 'FCL.Cockerham.Ogsm.Entities.User' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+System.InvalidOperationException: Attaching an entity of type 'FCL.Cockerham.Ogsm.Entities.User' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+   at System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   at System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClassa.<Attach>b__9()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   at System.Data.Entity.DbSet`1.Attach(TEntity entity)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.Update(TEntity t) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 301
+   at FCL.Cockerham.Ogsm.Domain.UserService.UpdateUser(UserDto _user, IUnitOfWork _dataRepositoryFactory) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.Domain\UserService.cs:line 29
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Owners.Controllers.Api.OwnersApiController.Put(UserDto user) in d:\Developments\OGSMDevelopment\FCL.Cockerham.Ogsm.ClientSite\Areas\Owners\Controllers\Api\OwnersApiController.cs:line 287

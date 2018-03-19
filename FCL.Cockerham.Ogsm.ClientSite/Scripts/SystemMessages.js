@@ -1,0 +1,1 @@
+SystemMessages={"ErrorLoggedInUserNull":"Error Occured. Please Contact the administrator","InfoRecordUpdated":"Record successfully updated","InfoRecordAdded":"Record successfully added","ErrorCreatingGoalTargets":"Goal Targets Not Created. Please Contact the administrator","InfoRecordDeleted":"Record successfully deleted"};

@@ -1,0 +1,39 @@
+﻿<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">Owners List</h3>
+    </div>
+    <div id="gridContent" class="box-body">
+        <table id="tblOwners" class="table table-bordered table-striped" ng-table="ownerVm.tableParams">
+            <thead>
+                <tr>
+                    <th>FirstName</th>
+                    <th>MiddleInitial</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Active</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="owner in $data">
+                    <td data-title="'First Name'">{{owner.FirstName}}</td>
+                    <td data-title="'Middle Initial'">{{owner.MiddleInitial}}</td>
+                    <td data-title="'Last Name'">{{owner.LastName}}</td>
+                    <td data-title="'Email'">{{owner.Email}}</td>
+                    <td data-title="'Mobile'">{{owner.Mobile}}</td>
+                    <td data-title="'Is Active'">{{owner.IsActive ? "Yes":"No"}}</td>
+                    <td data-title="'Edit'">
+                        <button type="button"
+                                class="btn btn-default btn-xs pull-right"
+                                ng-click="LoadById(owner.UserId)">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        @Resources.SystemResources.Common_webgrid_row_count_text <span id="rowCount">{{ownerVm.tableParams.total()}}</span>
+    </div>
+</div>

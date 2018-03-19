@@ -1,0 +1,38 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.FiscalYearDto
+
+@{
+    ViewBag.Title = "Stratus OGSM - Client Portal Company Setup - FiscalYear";
+}
+
+<script src="~/Scripts/App/CompanySetup/FiscalYear/FiscalYear.js"></script>
+
+<section class="content-header">
+    <h1>
+        Company Setup - FiscalYear
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li class="active">Company Setup - FiscalYear</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="col-lg-12 ">
+        <div>
+            <div ng-controller="FiscalYearViewModel as fiscalYearVm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box box-success">
+                            @Html.Partial("_CreateFiscalYear", @Model)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        @Html.Partial("_FiscalYearGrid")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

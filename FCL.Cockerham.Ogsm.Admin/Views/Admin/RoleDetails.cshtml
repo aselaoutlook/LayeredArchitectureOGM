@@ -1,0 +1,62 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.RoleDto
+@{
+    ViewBag.Title = "Role: " + Html.DisplayFor(model => model.RoleDescription);
+}
+<script type="text/javascript">
+    $(function() {
+        $(":input[type='button']").button();
+    });
+</script>
+
+<div class="panel panel-primary table-responsive">
+    <div class="panel-heading">
+        Role Details
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-hover" style='width: 80%'>
+            <tr>
+                <td style='width: 120px;font-weight: bold' class='userTable'>
+                    @Html.LabelFor(model => model.RoleName, new { @class = "form-label" })
+                </td>
+                <td class='userTable'>
+                    @Html.DisplayFor(model => model.RoleName, new { style = "width:350px", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.RoleName)
+                </td>
+            </tr>
+            <tr>
+                <td style='font-weight: bold' class='userTable'>
+                    @Html.LabelFor(model => model.RoleDescription, new { @class = "form-label" })
+                </td>
+                <td class='userTable'>
+                    @Html.DisplayFor(model => model.RoleDescription, new { style = "width:90%", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.RoleDescription)
+                </td>
+            </tr>
+
+            <tr>
+                <td style='width: 100px; font-weight: bold' class='userTable'>
+                    @Html.LabelFor(model => model.IsSysAdmin, "System Role", new { @class = "form-label" })
+                </td>
+                <td class='userTable'>
+                    @Html.DisplayFor(model => model.IsSysAdmin, new { style = "width:90%", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.IsSysAdmin)
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="panel-footer">
+        <input type="button" value="Edit" class="btn btn-primary" onclick="location.href='@Url.Action("RoleEdit", "Admin", new { id = Model.RoleId })'" />
+    </div>
+</div>
+
+<div class="panel panel-primary table-responsive">
+    <div class="panel-heading">
+        Permissions Associated with this Role
+    </div>
+    <div class="panel-body">
+        @Html.Partial("_ListPermissions", Model)
+    </div>
+    <div class="panel-footer">
+        @Html.ActionLink("Go to Roles", "RoleIndex", "Admin")
+    </div>
+</div>

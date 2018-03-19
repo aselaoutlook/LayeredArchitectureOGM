@@ -1,0 +1,213 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.UserDto
+<form id="frmCreateOwner" name="frmCreateOwner" ng-model-options="{ allowInvalid: true}" class="css-form">
+    <div class="box box-default">
+        <div class="box-header with-border">
+            <h3 class="box-title">By Strategy</h3>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <select id="ddlStrategicDriverId" name="ddlStrategicDriverId" ng-model="StrategicDriverId" class="form-control"
+                                ng-change="LoadStrategyEmployees()" ng-options="strategicDriver.Name for strategicDriver in StrategicDriver track by strategicDriver.StrategicDriverId">
+                            <option value="">Select Strategy</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                    </div>
+                </div>
+                <div class="col-md-6" ng-show="ShowEmployeeSearchDiv()">
+                    <div class="form-group">
+                        <input type="text" ng-model="keywords" class="form-control" style="width:250px !important" placeholder="Search Employee...">
+                    </div>
+                    <div class="form-group">                        
+                        <button type="submit" class="btn btn-info" ng-click="search()" data-toggle="modal" data-target="#myModal">Search</button>
+                    </div>
+                </div>
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Employee Details</h4>
+                            </div>
+                            <div class="modal-body">
+                                <table id="tblSearchUsers" class="table table-bordered table-striped" ng-table="ownerVm.SearchUsers">
+                                    <thead>
+                                        <tr>
+                                            <th>FirstName</th>
+                                            <th>LastName</th>
+                                            <th>Email</th>
+                                            <th>Mobile</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="owner in $data">
+                                            <td data-title="'First Name'">{{owner.FirstName}}</td>
+                                            <td data-title="'Last Name'">{{owner.LastName}}</td>
+                                            <td data-title="'Email'">{{owner.Email}}</td>
+                                            <td data-title="'Mobile'">{{owner.Mobile}}</td>
+                                            <td data-title="'Edit'">
+                                                <button type="button"
+                                                        class="btn btn-default btn-xs pull-right"
+                                                        ng-click="LoadByUserIdAndStrategyId(owner.UserId)">
+                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot></tfoot>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box box-success">
+        <div class="box-body">
+            <input type="hidden" ng-model="Owner.User.UserId" name="txtUserId" id="txtUserId" />
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FirstName, new { @class = "form-label" })
+                    <input id="txtFirstName" required ng-model="Owner.FirstName" name="FirstName" type="text" ng-maxlength="100" placeholder="Enter First name" class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.FirstName.$touched && frmCreateOwner.FirstName.$error.required">First name is Required.</span>
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.FirstName.$error.maxlength">Max. Leangth 100</span>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MiddleInitial, new { @class = "form-label" })
+                    <input id="txtMiddleInitial" required ng-model="Owner.MiddleInitial" name="MiddleInitial" ng-maxlength="1" placeholder="Enter Middle initial..." class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.$error.maxlength">Max. Leangth 1</span>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LastName, new { @class = "form-label" })
+                    <textarea id="txtLastName" required ng-model="Owner.LastName" name="LastName" rows="3" ng-maxlength="100" placeholder="Enter Last name..." class="form-control"></textarea>
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.LastName.$touched && frmCreateOwner.LastName.$error.required">Last name is Required.</span>
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.LastName.$error.maxlength">Max. Leangth 100</span>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserName, new { @class = "form-label" })
+                    <input id="txtUserName" required ng-model="Owner.UserName" name="UserName" ng-maxlength="100" placeholder="Enter UserName..." class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.UserName.$touched && frmCreateOwner.UserName.$error.required">UserName is Required.</span>
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.UserName.$error.maxlength">Max. Leangth 50</span>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, new { @class = "form-label" })
+                    <input id="txtPassword" type="password" required ng-model="Owner.Password" name="Password" ng-maxlength="100" placeholder="Enter Password..." class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.Password.$touched && frmCreateOwner.Password.$error.required">Password is Required.</span>
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.Password.$error.maxlength">Max. Leangth 100</span>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, new { @class = "form-label" })
+                    <input id="txtEmail" required ng-model="Owner.Email" type="email" name="Email" ng-maxlength="100" placeholder="Enter Emial name..." class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.Email.$touched && frmCreateOwner.Email.$error.required">Email is Required.</span>
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.Email.$error.maxlength">Max. Leangth 100</span>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Mobile, new { @class = "form-label" })
+                    <input id="txtMobile" ng-model="Owner.Mobile" name="Mobile" ng-maxlength="15" placeholder="Enter Mobile..." class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.Mobile.$error.maxlength">Min. Leangth 15</span>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Business Phone", new { @class = "form-label" })
+                    <input id="txtBusinessPhone" ng-model="Owner.EmployeeUser[0].BusinessPhone" name="BusinessPhone" ng-maxlength="15" placeholder="Enter Business Phone..." class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.BusinessPhone.$error.maxlength">Max. Leangth 15</span>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Country", new { @class = "form-label" })
+                    <input id="txtCountry" ng-model="Owner.EmployeeUser[0].Country" name="Country" ng-maxlength="50" placeholder="Enter Country..." class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.Country.$error.maxlength">Max. Leangth 50</span>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Address Line 1", new { @class = "form-label" })
+                    <input id="txtAddressLine1" ng-model="Owner.EmployeeUser[0].AddressOne" name="AddressOne" ng-maxlength="100" placeholder="Enter Address Line 1..." class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.AddressOne.$error.maxlength">Max. Leangth 100</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.Label("Address Line 2", new { @class = "form-label" })
+                    <input id="txtAddressLine2" ng-model="Owner.EmployeeUser[0].AddressTwo" name="AddressTwo" ng-maxlength="100" placeholder="Enter Address Line 2..." class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.AddressTwo.$error.maxlength">Max. Leangth 100</span>
+                </div>
+                <div class="form-group">
+                    @Html.Label("City", new { @class = "form-label" })
+                    <input id="txtCity" ng-model="Owner.EmployeeUser[0].City" name="City" ng-maxlength="50" placeholder="Enter City..." class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.City.$touched && frmCreateOwner.User.City.$error.required">City is Required.</span>
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.City.$error.maxlength">Max. Leangth 50</span>
+                </div>
+                <div class="form-group">
+                    @Html.Label("State/Province", new { @class = "form-label" })
+                    <input id="txtState" ng-model="Owner.EmployeeUser[0].State" name="State" ng-maxlength="50" placeholder="Enter State..." class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.State.$error.maxlength">Max. Leangth 50</span>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Zip Code", new { @class = "form-label" })
+                    <input id="txtZipCode" ng-model="Owner.EmployeeUser[0].Zip" name="Zip" ng-maxlength="10" placeholder="Enter Zip Code..." class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.Zip.$error.maxlength">Max. Leangth 10</span>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Notes", new { @class = "form-label" })
+                    <input id="txtNotes" ng-model="Owner.EmployeeUser[0].Notes" name="Notes" ng-maxlength="200" placeholder="Enter Notes..." class="form-control" />
+                    <span class="text-danger pull-right" ng-show="frmCreateOwner.Notes.$error.maxlength">Max. Leangth 200</span>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Is Business Unit Lead", new { @class = "form-label" })
+                    <input id="chkUserIsBusinessUnitLead" ng-model="Owner.EmployeeUser[0].IsBusinessUnitLead" name="IsBusinessUnitLead" type="checkbox" class="checkbox" />
+                </div>
+                <div class="form-group">
+                    @Html.Label("Is Goal Owner", new { @class = "form-label" })
+                    <input id="chkUserIsGoalOwner" ng-model="Owner.EmployeeUser[0].IsGoalOwner" name="IsGoalOwner" type="checkbox" class="checkbox" />
+                </div>
+                <div class="form-group">
+                    @Html.Label("Is Strategic Driver Owner", new { @class = "form-label" })
+                    <input id="chkUserIsStrategicDriverOwner" ng-model="Owner.EmployeeUser[0].IsStrategicDriverOwner" name="IsStrategicDriverOwner" type="checkbox" class="checkbox" />
+                </div>
+                <div class="form-group">
+                    @Html.Label("Is Action Plan Owner", new { @class = "form-label" })
+                    <input id="chkUserIsActionPlanOwner" ng-model="Owner.EmployeeUser[0].IsActionPlanOwner" name="IsActionPlanOwner" type="checkbox" class="checkbox" />
+                </div>
+                <div class="form-group">
+                    @Html.Label("Is View Only", new { @class = "form-label" })
+                    <input id="chkUserIsViewOnly" ng-model="Owner.EmployeeUser[0].IsViewOnly" name="IsViewOnly" type="checkbox" class="checkbox" />
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IsActive, new { @class = "form-label" })
+                    <input id="chkUserIsActive" ng-model="Owner.IsActive" name="IsActive" type="checkbox" class="checkbox" />
+                </div>
+                <div class="form-group upload-grant">
+                    @Html.Label("User Image", new { @class = "form-label" })
+                    <div class="col-md-12 col-sm-6 col-xs-12 form-inline upload-grant">
+                        <div class='row'>
+                            <div class='group'>
+                                <div id='groupcrop'>
+                                    <div class="FileUpload">
+                                        <input class='VPcropint' ng-model="Owner.Image" name="image" type='file' ng-files="uploadImage($files)" />
+                                        <img class="FileUploadImage" src="/Content/images/user_image.jpeg" ng-show="Image==null" />
+                                        <img class="FileUploadImage" ng-src="/UplodedFiles/UserTempImages/{{Image}}" ng-show="Image!=null" />
+                                    </div>
+                                    <div>
+                                        <a ng-show="Image!=null" id="Image" data-ng-click="removeFile($event)">Remove Files</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-footer">
+            <input type="reset" id="btnCancel" value="Cancel" class="btn" ng-click="Clear()">
+            <input type="button" id="btnSave" name="btnSave" value="Save" class="btn btn-info pull-right" ng-click="Save()" ng-disabled="frmCreateOwner.$invalid">
+        </div>
+    </div>
+</form>
+

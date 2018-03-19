@@ -1,0 +1,133 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BA324694-07F7-4D59-868A-AA10BAC225CA}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCL.Cockerham.Ogsm.Admin", "FCL.Cockerham.Ogsm.Admin\FCL.Cockerham.Ogsm.Admin.csproj", "{264E21D6-4024-4A53-B1BE-1CD42F3348FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCL.Cockerham.Ogsm.Bootstrapper", "FCL.Cockerham.Ogsm.Bootstrapper\FCL.Cockerham.Ogsm.Bootstrapper.csproj", "{95DF1FD7-3A39-47F0-AC48-F11C592189A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCL.Cockerham.Ogsm.Data", "FCL.Cockerham.Ogsm.Data\FCL.Cockerham.Ogsm.Data.csproj", "{2AC0EAF3-28E1-4DB1-835A-42E35D85A1F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCL.Cockerham.Ogsm.Data.Contracts", "FCL.Cockerham.Ogsm.Data.Contracts\FCL.Cockerham.Ogsm.Data.Contracts.csproj", "{0CE9A5EE-3EB2-4A4B-9C75-9FF7137B850A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCL.Cockerham.Ogsm.Entities", "FCL.Cockerham.Ogsm.Entities\FCL.Cockerham.Ogsm.Entities.csproj", "{352238B5-AAE4-4DB5-9971-37CFE29C5FB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCL.Web.Framework.Core.Common", "FCL.Web.Framework.Core.Common\FCL.Web.Framework.Core.Common.csproj", "{8ECAA795-B67C-4D3A-A22C-464F71F42454}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCL.Web.Framework.Core.Common.Contracts", "FCL.Web.Framework.Core.Common.Contracts\FCL.Web.Framework.Core.Common.Contracts.csproj", "{7FA28708-01DC-4F0A-AD0E-B8ED4A6A1736}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCL.Web.Framework.Core.RazorExtentions", "FCL.Web.Framework.Core.RazorExtentions\FCL.Web.Framework.Core.RazorExtentions.csproj", "{4E42A2C5-77F4-44DE-8215-0AF426DE8D38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EFBEDEE3-9725-4B67-8DE5-57BCA554B323}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.html = ReadMe.html
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCL.Cockerham.Ogsm.ClientSite", "FCL.Cockerham.Ogsm.ClientSite\FCL.Cockerham.Ogsm.ClientSite.csproj", "{1EEF6A05-66F2-417C-A181-0A47E2F3BE33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCL.Cockerham.Ogsm.Domain", "FCL.Cockerham.Ogsm.Domain\FCL.Cockerham.Ogsm.Domain.csproj", "{5879F355-8996-45CF-927E-7DEC88C8A6E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCL.Cockerham.Ogsm.Domain.Contracts", "FCL.Cockerham.Ogsm.Domain.Contracts\FCL.Cockerham.Ogsm.Domain.Contracts.csproj", "{594A5D6B-DFE8-47E9-A365-ADBE7F8C1A84}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://stratusogsm.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = FCL.Cockerham.Ogsm.Admin\\FCL.Cockerham.Ogsm.Admin.csproj
+		SccProjectName1 = FCL.Cockerham.Ogsm.Admin
+		SccLocalPath1 = FCL.Cockerham.Ogsm.Admin
+		SccProjectUniqueName2 = FCL.Cockerham.Ogsm.Bootstrapper\\FCL.Cockerham.Ogsm.Bootstrapper.csproj
+		SccProjectName2 = FCL.Cockerham.Ogsm.Bootstrapper
+		SccLocalPath2 = FCL.Cockerham.Ogsm.Bootstrapper
+		SccProjectUniqueName3 = FCL.Cockerham.Ogsm.ClientSite\\FCL.Cockerham.Ogsm.ClientSite.csproj
+		SccProjectName3 = FCL.Cockerham.Ogsm.ClientSite
+		SccLocalPath3 = FCL.Cockerham.Ogsm.ClientSite
+		SccProjectUniqueName4 = FCL.Cockerham.Ogsm.Data.Contracts\\FCL.Cockerham.Ogsm.Data.Contracts.csproj
+		SccProjectName4 = FCL.Cockerham.Ogsm.Data.Contracts
+		SccLocalPath4 = FCL.Cockerham.Ogsm.Data.Contracts
+		SccProjectUniqueName5 = FCL.Cockerham.Ogsm.Data\\FCL.Cockerham.Ogsm.Data.csproj
+		SccProjectName5 = FCL.Cockerham.Ogsm.Data
+		SccLocalPath5 = FCL.Cockerham.Ogsm.Data
+		SccProjectUniqueName6 = FCL.Cockerham.Ogsm.Domain.Contracts\\FCL.Cockerham.Ogsm.Domain.Contracts.csproj
+		SccProjectName6 = FCL.Cockerham.Ogsm.Domain.Contracts
+		SccLocalPath6 = FCL.Cockerham.Ogsm.Domain.Contracts
+		SccProjectUniqueName7 = FCL.Cockerham.Ogsm.Domain\\FCL.Cockerham.Ogsm.Domain.csproj
+		SccProjectName7 = FCL.Cockerham.Ogsm.Domain
+		SccLocalPath7 = FCL.Cockerham.Ogsm.Domain
+		SccProjectUniqueName8 = FCL.Cockerham.Ogsm.Entities\\FCL.Cockerham.Ogsm.Entities.csproj
+		SccProjectName8 = FCL.Cockerham.Ogsm.Entities
+		SccLocalPath8 = FCL.Cockerham.Ogsm.Entities
+		SccProjectUniqueName9 = FCL.Web.Framework.Core.Common.Contracts\\FCL.Web.Framework.Core.Common.Contracts.csproj
+		SccProjectName9 = FCL.Web.Framework.Core.Common.Contracts
+		SccLocalPath9 = FCL.Web.Framework.Core.Common.Contracts
+		SccProjectUniqueName10 = FCL.Web.Framework.Core.Common\\FCL.Web.Framework.Core.Common.csproj
+		SccProjectName10 = FCL.Web.Framework.Core.Common
+		SccLocalPath10 = FCL.Web.Framework.Core.Common
+		SccProjectUniqueName11 = FCL.Web.Framework.Core.RazorExtentions\\FCL.Web.Framework.Core.RazorExtentions.csproj
+		SccProjectName11 = FCL.Web.Framework.Core.RazorExtentions
+		SccLocalPath11 = FCL.Web.Framework.Core.RazorExtentions
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{264E21D6-4024-4A53-B1BE-1CD42F3348FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{264E21D6-4024-4A53-B1BE-1CD42F3348FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{264E21D6-4024-4A53-B1BE-1CD42F3348FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{264E21D6-4024-4A53-B1BE-1CD42F3348FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95DF1FD7-3A39-47F0-AC48-F11C592189A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95DF1FD7-3A39-47F0-AC48-F11C592189A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95DF1FD7-3A39-47F0-AC48-F11C592189A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95DF1FD7-3A39-47F0-AC48-F11C592189A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AC0EAF3-28E1-4DB1-835A-42E35D85A1F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AC0EAF3-28E1-4DB1-835A-42E35D85A1F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AC0EAF3-28E1-4DB1-835A-42E35D85A1F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AC0EAF3-28E1-4DB1-835A-42E35D85A1F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CE9A5EE-3EB2-4A4B-9C75-9FF7137B850A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE9A5EE-3EB2-4A4B-9C75-9FF7137B850A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE9A5EE-3EB2-4A4B-9C75-9FF7137B850A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE9A5EE-3EB2-4A4B-9C75-9FF7137B850A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{352238B5-AAE4-4DB5-9971-37CFE29C5FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352238B5-AAE4-4DB5-9971-37CFE29C5FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352238B5-AAE4-4DB5-9971-37CFE29C5FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352238B5-AAE4-4DB5-9971-37CFE29C5FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ECAA795-B67C-4D3A-A22C-464F71F42454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ECAA795-B67C-4D3A-A22C-464F71F42454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ECAA795-B67C-4D3A-A22C-464F71F42454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ECAA795-B67C-4D3A-A22C-464F71F42454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA28708-01DC-4F0A-AD0E-B8ED4A6A1736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA28708-01DC-4F0A-AD0E-B8ED4A6A1736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA28708-01DC-4F0A-AD0E-B8ED4A6A1736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA28708-01DC-4F0A-AD0E-B8ED4A6A1736}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E42A2C5-77F4-44DE-8215-0AF426DE8D38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E42A2C5-77F4-44DE-8215-0AF426DE8D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E42A2C5-77F4-44DE-8215-0AF426DE8D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E42A2C5-77F4-44DE-8215-0AF426DE8D38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EEF6A05-66F2-417C-A181-0A47E2F3BE33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EEF6A05-66F2-417C-A181-0A47E2F3BE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EEF6A05-66F2-417C-A181-0A47E2F3BE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EEF6A05-66F2-417C-A181-0A47E2F3BE33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5879F355-8996-45CF-927E-7DEC88C8A6E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5879F355-8996-45CF-927E-7DEC88C8A6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5879F355-8996-45CF-927E-7DEC88C8A6E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5879F355-8996-45CF-927E-7DEC88C8A6E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{594A5D6B-DFE8-47E9-A365-ADBE7F8C1A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{594A5D6B-DFE8-47E9-A365-ADBE7F8C1A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{594A5D6B-DFE8-47E9-A365-ADBE7F8C1A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{594A5D6B-DFE8-47E9-A365-ADBE7F8C1A84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,48 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.PillarDto
+
+<div class="box-header with-border">
+    <h3 class="box-title">Add New Pillar</h3>
+</div>
+
+<div class="box-body">
+    <form id="frmCreatePillar" name="frmCreatePillar" ng-model-options="{ allowInvalid: true}" class="css-form">
+        <input type="hidden" ng-model="Pillar.PillarId" name="txtPillarId" id="txtPillarId" />
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, new { @class = "form-label" })
+            <input id="txtPillarName" required ng-model="Pillar.Name" name="Name" type="text" ng-maxlength="300" placeholder="Enter Pillar Name" class="form-control" />
+            <span class="text-danger pull-right" ng-show="frmCreatePillar.Name.$touched && frmCreatePillar.Name.$error.required">Name is Required.</span>
+            <span class="text-danger pull-right" ng-show="frmCreatePillar.Name.$error.maxlength">Max. Leangth 300</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, new { @class = "form-label" })
+            <textarea id="txtPillarDescription" ng-model="Pillar.Description" name="Description" rows="3" ng-minlength="3" ng-maxlength="300" placeholder="Enter Description..." class="form-control"></textarea>
+            <span class="text-danger pull-right" ng-show="frmCreatePillar.Description.$error.maxlength">Max. Leangth 1500</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.StTypeId, "Strategy Type", new { @class = "form-label" })
+            <select id="ddlStTypeId" name="ddlStTypeId" required ng-model="Pillar.StTypeId" class="form-control"
+                    ng-options="stType.Name for stType in StType track by stType.StTypeId">
+                <option value="">Select StType</option>
+            </select>
+            <span class="text-danger pull-right" ng-show="frmCreatePillar.ddlStTypeId.$touched && frmCreatePillar.ddlStTypeId.$error.required">Select StType</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.SequenceNumber, new { @class = "form-label" })
+            <input id="txtSequenceNumber" required ng-model="Pillar.SequenceNumber" name="SequenceNumber" type="number" placeholder="Sequence Number" class="form-control" />
+            <span class="text-danger pull-right" ng-show="frmCreatePillar.SequenceNumber.$touched && frmCreatePillar.SequenceNumber.$error.required">SequenceNumber is Required.</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsActive, new { @class = "form-label" })
+            <input id="chkPillarIsActive" ng-model="Pillar.IsActive" name="IsActive" type="checkbox" class="checkbox" />
+        </div>
+    </form>
+</div>
+<div class="box-footer">
+    <input type="reset" id="btnCancel" value="Cancel" class="btn" ng-click="Clear()">
+    <input type="button" id="btnSave" name="btnSave" value="Save" class="btn btn-info pull-right" ng-click="Save()" ng-disabled="frmCreatePillar.$invalid">     
+</div>
+
+
+
+
+

@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Dashboard Template for Bootstrap</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS -->
+    <style>
+           /*
+        * Base structure
+        */
+
+           /* Move down content because we have a fixed navbar that is 50px tall */
+           body {
+               padding-top: 50px;
+           }
+
+
+           /*
+        * Global add-ons
+        */
+
+           .sub-header {
+               padding-bottom: 10px;
+               border-bottom: 1px solid #eee;
+           }
+
+
+           /*
+        * Sidebar
+        */
+
+           /* Hide for mobile, show later */
+           .sidebar {
+               display: none;
+           }
+
+           @media (min-width: 768px) {
+               .sidebar {
+                   position: fixed;
+                   top: 0;
+                   left: 0;
+                   bottom: 0;
+                   z-index: 1000;
+                   display: block;
+                   padding: 70px 20px 20px;
+                   background-color: #f5f5f5;
+                   border-right: 1px solid #eee;
+               }
+           }
+
+           /* Sidebar navigation */
+           .nav-sidebar {
+               margin-left: -20px;
+               margin-right: -21px; /* 20px padding + 1px border */
+               margin-bottom: 20px;
+           }
+
+               .nav-sidebar > li > a {
+                   padding-left: 20px;
+                   padding-right: 20px;
+               }
+
+               .nav-sidebar > .active > a {
+                   color: #fff;
+                   background-color: #428bca;
+               }
+
+
+           /*
+        * Main content
+        */
+
+           .main {
+               padding: 20px;
+           }
+
+           @media (min-width: 768px) {
+               .main {
+                   padding-left: 40px;
+                   pading-right: 40px;
+               }
+           }
+
+           .main .page-header {
+               margin-top: 0;
+           }
+
+
+           /*
+        * Placeholder dashboard ideas
+        */
+
+           .placeholders {
+               margin-bottom: 30px;
+               text-align: center;
+           }
+
+               .placeholders h4 {
+                   margin-bottom: 0;
+               }
+
+           .placeholder {
+               margin-bottom: 20px;
+           }
+
+               .placeholder img {
+                   border-radius: 50%;
+               }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a href="#">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#">Help</a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active">
+                        <a href="#">Getting Started</a>
+                    </li>
+                    <li>
+                        <a href="#">Data Auditing</a>
+                    </li>
+                    <li>
+                        <a href="#">User Permissions</a>
+                    </li>
+                    <li>
+                        <a href="#">Razor Extensions</a>
+                    </li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 main">
+                <h1 class="page-header">Dashboard</h1>
+
+
+                <div class="table-responsive">
+                </div>
+                <p>Brief about MEF Framework &amp; link to location</p>
+                <h3>Naming Projects &amp; Namespaces</h3>
+                <p>Framework has to be renamed to align with the project you work. Below steps brief what you need to carry out before start actual coding for client.</p>
+                <blockquote>
+                    <span class="label label-info">Note</span>
+                    <p>
+                        ReSharper tool can perform much of the below steps in few clicks
+                        <br>
+                    </p>
+                    <a href="https://www.jetbrains.com/resharper/"><small>Jet Brains claims</small></a>
+                </blockquote>
+                <p>
+                </p>
+                <ol class="pg-empty-placeholder">
+                    <li>Change solution name to FCL.Cockerham.Ogsm. Ex:- FCL.Web.Framework = FCL.Cockerham.Ogsm Go to properties in solutions to change</li>
+                    <li>
+                        Change namespaces of each project that is named as FCL.Cockerham.Ogsm.xxxx Ex:- FCL.Cockerham.Ogsm.Admin = FCL.Microsoft.SharePoint.Admin
+                        <ol>
+                            <li>Go to properties in project and change project file</li>
+                            <li>Right click project, properties, Application tab change assembly name and default namespace Keep Client.Project part simple and not too long.</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Change directory names of each project to match with above guidelines. Ex:- After you change FCL.Web.Framework.Admin project as in step 2
+                        <ol>
+                            <li>remove the project from solution and rename the FCL.Web.Framework.Admin directory to FCL.Cockerham.Ogsm.Admin</li>
+                            <li>Re add the project to solution from the renamed directory</li>
+                        </ol>
+                    </li>
+                    <li>Namespaces in class files must be updated to match with the above changes</li>
+                    <li>Update AssemblyInfo (in AssemblyInfo.cs) details as necessary</li>
+                </ol>
+                <blockquote>
+                    <span class="label label-warning">Attention</span>
+                    <p>
+                        If you are adding any functionality that can be included into the framework (not client specific) make sure you follow project naming and namespace naming guidelines. Ex:- FCL.Web.Framework.XXXXXX
+                        <br>
+                    </p> <small>FCL</small>
+                </blockquote>
+                <div class="tab-content">
+                    <div class="tab-pane" id="tab1">Tab tab1 content goes here...</div>
+                    <div class="tab-pane" id="tab1">Tab tab1 content goes here...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+</body>
+</html>

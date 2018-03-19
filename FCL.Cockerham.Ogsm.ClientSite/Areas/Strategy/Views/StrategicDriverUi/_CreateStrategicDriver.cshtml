@@ -1,0 +1,131 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.StrategicDriverDto
+
+<div class="box-header with-border">
+    <h3 class="box-title">Add New Strategic Driver</h3>
+</div>
+<div class="box-body">
+    <form id="frmCreateStrategicDriver" name="frmCreateStrategicDriver" ng-model-options="{ allowInvalid: true}" class="css-form">
+        <input type="hidden" ng-model="StrategicDriver.StrategicDriverId" name="txtGoalId" id="txtStrategicDriverId" />
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.FiscalYear, "Fiscal Year", new { @class = "form-label" })
+                <select id="ddlFiscalYearId" name="ddlFiscalYearId" required ng-model="StrategicDriver.FiscalYearId" class="form-control"
+                        ng-options="((fiscalYear.StartYear | date:'shortDate') +'-'+ (fiscalYear.EndYear | date:'shortDate' )) for fiscalYear in FiscalYear track by fiscalYear.FiscalYearId">
+                    <option value="">
+                        Select Fiscal Year
+                    </option>
+                </select>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.ddlFiscalYearId.$touched && frmCreateStrategicDriver.ddlFiscalYearId.$error.required">Select Fiscal Year</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Pillar, "Pillar", new { @class = "form-label" })
+                
+                <select id="ddlPillarId" name="ddlPillarId" required ng-model="StrategicDriver.PillarId" class="form-control"
+                        ng-change="LoadGoal()" ng-options="pillar.Name for pillar in Pillar track by pillar.PillarId">
+                    <option value="">Select Pillar</option>
+                </select>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.ddlPillarId.$touched && frmCreateStrategicDriver.ddlPillarId.$error.required">Select Pillar</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.GoalId, "Goal", new { @class = "form-label" })
+                <select id="ddlGoalId" name="ddlGoalId" ng-disabled="!Goal" ng-required="true" ng-model="StrategicDriver.GoalId" class="form-control"
+                        ng-options="goal.Name for goal in Goal track by goal.GoalId">
+                    <option value="">Select Goal</option>
+                </select>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.ddlgoalId.$touched && frmCreateStrategicDriver.ddlgoalId.$error.required">Select Goal</span>
+            </div>
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.StTypeId, "Strategy Type", new { @class = "form-label" })
+                <select id="ddlStTypeId" name="ddlStTypeId" required ng-model="StrategicDriver.StTypeId" class="form-control"
+                        ng-options="stType.Name for stType in StType track by stType.StTypeId">
+                    <option value="">Select StType</option>
+                </select>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.ddlStTypeId.$touched && frmCreateStrategicDriver.ddlStTypeId.$error.required">Select Department</span>
+            </div>*@
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, new { @class = "form-label" })
+                <textarea id="txtStrategicDriverName" required ng-model="StrategicDriver.Name" name="Name" type="text" rows="3" ng-maxlength="1500" placeholder="Enter Strategic Driver Name" class="form-control"> </textarea>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.Name.$touched && frmCreateStrategicDriver.Name.$error.required">Strategic Driver Name is Required.</span>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.Name.$error.maxlength">Max. Leangth 1500</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.StartDate, new { @class = "form-label" })
+                <p class="input-group">
+                    <input id="txtStrategicDriverStartYear" class="form-control" uib-datepicker-popup="yyyy/MM/dd"
+                           ng-model="StrategicDriver.StartDate" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" name="StartYear"
+                           alt-input-formats="altInputFormats" required="required" style="" type="text">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.StartYear.$touched && frmCreateStrategicDriver.StartYear.$error.required">Start Year is Required.</span>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.StartYear.$error.date">Not a valid date!</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EndDate, new { @class = "form-label" })
+                <p class="input-group">
+                    <input id="txtStrategicDriverEndYear" class="form-control" uib-datepicker-popup="yyyy/MM/dd"
+                           ng-model="StrategicDriver.EndDate" is-open="popup3.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" name="EndYear"
+                           alt-input-formats="altInputFormats" required="required" style="" type="text">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open3()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.EndYear.$touched && frmCreateStrategicDriver.EndYear.$error.required">End Year is Required.</span>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.EndYear.$error.date">Not a valid date!</span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Metric, new { @class = "form-label" })
+                <input id="txtMetric" required ng-model="StrategicDriver.Metric" name="Metric" type="text" ng-maxlength="300" placeholder="Enter Metric" class="form-control" />
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.Metric.$touched && frmCreateStrategicDriver.Metric.$error.required">Metric is Required.</span>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.Metric.$error.maxlength">Max. Leangth 300</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.MetricTarget, "Metric Target", new { @class = "form-label" })
+                <input id="txtMetricTarget" required ng-model="StrategicDriver.MetricTarget" name="MetricTarget" type="number" placeholder="Select Metric" class="form-control" />
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.MetricTarget.$touched && frmCreateStrategicDriver.MetricTarget.$error.required">Evaluation Length is Required.</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.WeightActionPlan, "Weight Action Plan", new { @class = "form-label" })
+                <input id="txtWeightActionPlan" ng-change="CalculatWeightMetric()" required ng-model="StrategicDriver.WeightActionPlan" name="WeightActionPlan" type="number" placeholder="Enter Weight Action Plan" class="form-control" value="35"/>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.WeightActionPlan.$touched && frmCreateStrategicDriver.WeightActionPlan.$error.required">Weight Action Plan is Required.</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.WeightMetric, "Weight Metric", new { @class = "form-label" })
+                <input id="txtWeightMetric" ng-change="CalculatWeightActionPlan()" required ng-model="StrategicDriver.WeightMetric" name="WeightMetric" type="number" placeholder="Enter Weight Metric" class="form-control" value="65"/>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.WeightMetric.$touched && frmCreateStrategicDriver.WeightMetric.$error.required">Weight Metric is Required.</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.SequenceNumber, new { @class = "form-label" })
+                <input id="txtSequenceNumber" required ng-model="StrategicDriver.SequenceNumber" name="SequenceNumber" type="number" placeholder="Sequence Number" class="form-control" />
+                @*<span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.SequenceNumber.$touched && frmCreateStrategicDriver.SequenceNumber.$error.required">SequenceNumber is Required.</span>*@
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Owner, new { @class = "form-label" })
+                <select id="ddlOwnerId" name="ddlOwnerId" required ng-model="StrategicDriver.OwnerId" class="form-control"
+                        ng-change="LoadActiveGoalOwners()" ng-options="owner.FirstName + ' ' + owner.LastName for owner in Owners track by owner.UserId">
+                    <option value="">Select Owner</option>
+                </select>
+                <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.ddlOwnerId.$touched && frmCreateStrategicDriver.ddlOwnerId.$error.required">Select Owner</span>
+            </div>
+            <div class="form-group hidden">
+                @Html.LabelFor(model => model.IsMetricDefault, "Is Metric defaulted to 100% completions of action plans", new { @class = "form-label" })
+                <input id="chkStrategicDriverIsMetricDefault" ng-model="StrategicDriver.IsMetricDefault" name="IsMetricDefault" type="checkbox" class="checkbox" />
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.IsIndexed, "Is Indexed", new { @class = "form-label" })
+                <input id="chkStrategicDriverIsIndexed" ng-model="StrategicDriver.IsIndexed" name="IsIndexed" type="checkbox" class="checkbox" />
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.IsActive, new { @class = "form-label" })
+                <input id="chkStrategicDriverIsActive" ng-model="StrategicDriver.IsActive" name="IsActive" type="checkbox" class="checkbox" />
+            </div>
+        </div>
+    </form>
+</div>
+<div class="box-footer">
+    <input type="reset" id="btnCancel" value="Cancel" class="btn" ng-click="Clear()">
+    <input type="button" id="btnSave" name="btnSave" value="Save" class="btn btn-info pull-right" ng-click="Save()" ng-disabled="frmCreateStrategicDriver.$invalid">
+</div>

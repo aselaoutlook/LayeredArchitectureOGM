@@ -1,0 +1,73 @@
+﻿@model ICollection<FCL.Cockerham.Ogsm.Entities.DTOs.UserDto>
+@{
+    ViewBag.Title = "Administration Page";
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#pbFilter").click(function () {
+            $.get("/Admin/filter4Users", { surname: $("#SurnameId").val() }, function (data) {
+                $("#divUsers").html(data);
+            })
+        })
+    });
+
+    $(function () {
+        $("#pbReset").click(function () {
+            $("#SurnameId").val('');
+            $.get("/Admin/filterReset", {}, function (data) {
+                $("#divUsers").html(data);
+            })
+        })
+    });
+
+    $(document).ready(function () {
+        $(":input[type='button']").button();
+        $('.collapse').collapse();
+    });
+</script>
+
+<p class="lead">
+    @Html.Raw(Resources.SystemControls.UserCreationHeader)
+</p>
+<div role="tablist" class="panel-group">
+    <div class="panel panel-success" style="width:30%;">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a aria-controls="collapseListGroup1" aria-expanded="false" href="#collapseListGroup1" data-toggle="collapse" role="button" class="collapsed">@Html.Raw(Resources.SystemControls.UserSearchFilter)</a>
+            </h4>
+        </div>
+        <div aria-labelledby="collapseListGroupHeading1" role="tabpanel" class="panel-collapse collapse" id="collapseListGroup1" aria-expanded="true" style="height: 0px;">
+            <table class="table table-striped">
+                <tr>
+                    <td>
+                        @Html.Raw(Resources.SystemControls.UserLastName)
+                    </td>
+                    <td>
+                        @Html.TextBox("SurnameId", string.Empty, new { style = "width:200px", maxlength = 30, @class = "form-control" })
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" class="btn btn-info" value="@Html.Raw(Resources.SystemControls.Filter)" id="pbFilter" name="pbFilter" />
+                        <input type="button" class="btn btn-info" value="@Html.Raw(Resources.SystemControls.Reset)" id="pbReset" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<br />
+<div class="panel panel-primary" style="width:80%;">
+    <div class="panel-heading">
+        @Html.Raw(Resources.SystemMessages.UserTableHeader)
+    </div>
+    <div class="panel-body">
+        @Html.Partial("_ListUserTable", Model)
+    </div>
+    <div class="panel-footer">
+        <div>
+            <input type="button" class="btn btn-primary" value="@Html.Raw(Resources.SystemControls.UserCreate)" onclick="location.href='@Url.Action("UserCreate", "Admin")'" />
+        </div>
+    </div>
+</div>

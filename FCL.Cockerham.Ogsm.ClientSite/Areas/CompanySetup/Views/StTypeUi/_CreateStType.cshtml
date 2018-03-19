@@ -1,0 +1,43 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.StTypeDto
+
+<div class="box-header with-border">
+    <h3 class="box-title">Add New StType</h3>
+</div>
+
+<div class="box-body">
+    <form id="frmCreateStType" name="frmCreateStType" ng-model-options="{ allowInvalid: true}" class="css-form">
+        <input type="hidden" ng-model="StType.StTypeId" name="txtStTypeId" id="txtStTypeId" />
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, new { @class = "form-label" })
+            <input id="txtStTypeName" required ng-model="StType.Name" name="Name" type="text" ng-maxlength="300" placeholder="Enter StType Name" class="form-control" />
+            <span class="text-danger pull-right" ng-show="frmCreateStType.Name.$touched && frmCreateStType.Name.$error.required">Name is Required.</span>
+            <span class="text-danger pull-right" ng-show="frmCreateStType.Name.$error.maxlength">Max. Leangth 300</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, new { @class = "form-label" })
+            <textarea id="txtStTypeDescription" ng-model="StType.Description" name="Description" rows="3" ng-maxlength="300" placeholder="Enter Description..." class="form-control"></textarea>
+            <span class="text-danger pull-right" ng-show="frmCreateStType.Description.$error.maxlength">Max. Leangth 1500</span>
+        </div>
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.BusinessUnitId, "Business Unit", new { @class = "form-label" })
+            <select id="ddlBusinessUnitId" name="ddlBusinessUnitId" required ng-model="StType.BusinessUnitId" class="form-control"
+                    ng-options="businessUnit.Name for businessUnit in BusinessUnit track by businessUnit.BusinessUnitId">
+                <option value="">Select Business Unit</option>
+            </select>
+            <span class="text-danger pull-right" ng-show="frmCreateStType.ddlBusinessUnitId.$touched && frmCreateStType.ddlBusinessUnitId.$error.required">Select Business Unit</span>
+        </div>*@
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsActive, new { @class = "form-label" })
+            <input id="chkStTypeIsActive" ng-model="StType.IsActive" name="IsActive" type="checkbox" class="checkbox" />
+        </div>
+    </form>
+</div>
+<div class="box-footer">
+    <input type="reset" id="btnCancel" value="Cancel" class="btn" ng-click="Clear()">
+    <input type="button" id="btnSave" name="btnSave" value="Save" class="btn btn-info pull-right" ng-click="Save()" ng-disabled="frmCreateStType.$invalid">     
+</div>
+
+
+
+
+

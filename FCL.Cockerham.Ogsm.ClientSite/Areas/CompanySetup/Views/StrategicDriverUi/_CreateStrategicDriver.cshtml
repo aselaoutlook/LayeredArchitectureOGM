@@ -1,0 +1,31 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.StrategicDriverDto
+
+<div class="box-header with-border">
+    <h3 class="box-title">Add New StrategicDriver</h3>
+</div>
+
+<div class="box-body">
+    <form id="frmCreateStrategicDriver" name="frmCreateStrategicDriver" ng-model-options="{ allowInvalid: true}" class="css-form">
+        <input type="hidden" ng-model="StrategicDriver.StrategicDriverId" name="txtStrategicDriverId" id="txtStrategicDriverId" />
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, new { @class = "form-label" })
+            <input id="txtStrategicDriverName" required ng-model="StrategicDriver.Name" name="Name" type="text" ng-minlength="3" ng-maxlength="300" placeholder="Enter StrategicDriver Name" class="form-control" />
+            <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.Name.$touched && frmCreateStrategicDriver.Name.$error.required">Name is Required.</span>
+            <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.Name.$error.minlength">Min. Leangth 3</span>
+            <span class="text-danger pull-right" ng-show="frmCreateStrategicDriver.Name.$error.maxlength">Min. Leangth 300</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsActive, new { @class = "form-label" })
+            <input id="chkStrategicDriverIsActive" ng-model="StrategicDriver.IsActive" name="IsActive" type="checkbox" class="checkbox" />
+        </div>
+    </form>
+</div>
+<div class="box-footer">
+    <input type="reset" id="btnCancel" value="Cancel" class="btn" ng-click="Clear()">
+    <input type="button" id="btnSave" name="btnSave" value="Save" class="btn btn-info pull-right" ng-click="Save()" ng-disabled="frmCreateStrategicDriver.$invalid">     
+</div>
+
+
+
+
+

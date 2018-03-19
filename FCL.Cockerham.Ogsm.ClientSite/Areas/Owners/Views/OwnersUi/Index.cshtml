@@ -1,0 +1,38 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.ViewModel.EmployeeUserViewModel
+
+@{
+    ViewBag.Title = "Stratus OGSM - Client Portal Owners";
+}
+
+<script src="~/Scripts/App/OwnerSetup/Owners/Owners.js"></script>
+
+<section class="content-header">
+    <h1>
+        Owners Setup
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li class="active">Owners Setup</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="col-lg-12 ">
+        <div>
+            <div ng-controller="OwnerViewModel as ownerVm">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.Partial("_CreateOwner", @Model)
+                    </div>
+                    <div class="col-md-12">
+                        @Html.Partial("_OwnerGrid")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->
+
+

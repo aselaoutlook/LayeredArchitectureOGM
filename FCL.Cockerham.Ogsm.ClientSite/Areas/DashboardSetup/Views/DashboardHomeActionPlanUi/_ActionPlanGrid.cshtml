@@ -1,0 +1,60 @@
+﻿<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">Action Plan List</h3>
+    </div>
+    <div id="gridContent" class="box-body">
+        <table id="tblActionPlan" class="table table-bordered table-striped" ng-table="ctrl.tableParams">
+            <thead>
+                <tr>
+                    @*<th>Goal Category</th>
+                    <th>Goal</th>
+                    <th>StrategicDriver</th>*@
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Action Plan</th>
+                    @*<th>Event ?</th>
+                    <th>Calendar Event ?</th>*@
+                    <th>Owner</th>
+                    <th>Due Date</th>
+                    <th>Planned Cost</th>
+                    <th>Actual Cost</th>
+                    <th>Impact</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="actionPlan in $data">
+                    @*<td data-title="'Goal Category'">{{actionPlan.GoalCategory.Name}}</td>
+                    <td data-title="'Goal'">{{actionPlan.Goal.Name}}</td>
+                    <td data-title="'StrategicDriver'">{{actionPlan.StrategicDriver.Name}}</td>*@
+                    <td data-title="'Strat Date'">{{actionPlan.StrategicDriver.StartDate | date:'shortDate'}}</td>
+                    <td data-title="'End Date'">{{actionPlan.StrategicDriver.EndDate | date:'shortDate'}}</td>
+                    <td data-title="'Name'">{{actionPlan.Name}}</td>
+                    @*<td data-title="'IsEvent'">{{actionPlan.IsEvent ? "Yes":"No"}}</td>
+                    <td data-title="'IsCalendarEvent'">{{actionPlan.IsCalendarEvent ? "Yes":"No"}}</td>*@
+                    <td data-title="'Action Plan Owner'">{{actionPlan.ActionPlanOwner.FirstName}}&nbsp;{{actionPlan.ActionPlanOwner.LastName}}</td>
+                    <td data-title="'Due Date'">{{actionPlan.DueDate | date:'shortDate'}}</td>
+                    <td data-title="'Planned Cost'">{{actionPlan.PlannedCost}}</td>
+                    <td data-title="'Actual Cost'">{{actionPlan.ActualCost}}</td>
+                    <td data-title="'Impact'">{{actionPlan.Impact}}</td>
+                    <td data-title="'Status'">
+                        <select id="ddlActionStatusId" name="ddlActionStatusId" required ng-model="actionPlan.ActionStatus" s class="form-control"
+                                ng-change="ChangeActionStatus(actionPlan.ActionPlanId, actionPlan.ActionStatus)" ng-options="apActionStatus.Status for apActionStatus in ApActionStatus track by apActionStatus.ActionStatusId">
+                            <option value="">Select Status</option>
+                        </select>
+                    </td>
+                    <td data-title="'Edit'">
+                        <button type="button"
+                                class="btn btn-default btn-xs pull-right"
+                                ng-click="OpenActionPlanEditModal(actionPlan.ActionPlanId)">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        @Resources.SystemResources.Common_webgrid_row_count_text <span id="rowCount">{{ctrl.tableParams.total()}}</span>
+    </div>
+</div>

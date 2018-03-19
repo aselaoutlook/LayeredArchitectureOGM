@@ -1,0 +1,37 @@
+﻿<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">Fiscal Year List</h3>
+    </div>
+    <div id="gridContent" class="box-body">
+        <table id="tblFiscalYear" class="table table-bordered table-striped" ng-table="fiscalYearVm.tableParams">
+            <thead>
+                <tr>
+                    <th>Strat Date</th>
+                    <th>End Date</th>
+                    <th>Evaluation Length</th>
+                    <th>Description</th>
+                    <th>Active</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="fiscalYear in $data">
+                    <td data-title="'Strat Year'">{{fiscalYear.StartYear | date:'shortDate'}}</td>
+                    <td data-title="'End Year'">{{fiscalYear.EndYear | date:'shortDate'}}</td>
+                    <td data-title="'EvaluationLength'">{{fiscalYear.EvaluationLength}}</td>
+                    <td data-title="'Description'">{{fiscalYear.Description}}</td>
+                    <td data-title="'Is Active'">{{fiscalYear.IsActive ? "Yes":"No"}}</td>
+                    <td data-title="'Edit'">
+                        <button type="button"
+                                class="btn btn-default btn-xs pull-right"
+                                ng-click="LoadById(fiscalYear.FiscalYearId)">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        @Resources.SystemResources.Common_webgrid_row_count_text <span id="rowCount">{{fiscalYearVm.tableParams.total()}}</span>
+    </div>
+</div>

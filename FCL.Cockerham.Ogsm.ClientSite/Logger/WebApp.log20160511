@@ -1,0 +1,433 @@
+{ERROR}11/05/2016 12:44:22 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.GoalCategory' does not declare a navigation property with the name 'GoalCategory'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.GoalCategory' does not declare a navigation property with the name 'GoalCategory'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetList(Expression`1 filter, Func`2 orderBy, String includeProperties) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 221
+   at FCL.Cockerham.Ogsm.Domain.GoalCategoryService.GetGoalCategoryByDepartment(Int64 _departmentId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.Domain\GoalCategoryService.cs:line 80
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Goals.Controllers.Api.GoalCategoryApiController.GetGoalCategoriesByDepartmentId(Int64 DepartmentId) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.ClientSite\Areas\Goals\Controllers\Api\GoalCategoryApiController.cs:line 73
+{ERROR}11/05/2016 12:44:25 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.GoalCategory' does not declare a navigation property with the name 'GoalCategory'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.GoalCategory' does not declare a navigation property with the name 'GoalCategory'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetList(Expression`1 filter, Func`2 orderBy, String includeProperties) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 221
+   at FCL.Cockerham.Ogsm.Domain.GoalCategoryService.GetGoalCategoryByDepartment(Int64 _departmentId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.Domain\GoalCategoryService.cs:line 80
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Goals.Controllers.Api.GoalCategoryApiController.GetGoalCategoriesByDepartmentId(Int64 DepartmentId) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.ClientSite\Areas\Goals\Controllers\Api\GoalCategoryApiController.cs:line 73
+{ERROR}11/05/2016 12:44:30 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.GoalCategory' does not declare a navigation property with the name 'GoalCategory'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.GoalCategory' does not declare a navigation property with the name 'GoalCategory'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetList(Expression`1 filter, Func`2 orderBy, String includeProperties) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 221
+   at FCL.Cockerham.Ogsm.Domain.GoalCategoryService.GetGoalCategoryByDepartment(Int64 _departmentId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.Domain\GoalCategoryService.cs:line 80
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Goals.Controllers.Api.GoalCategoryApiController.GetGoalCategoriesByDepartmentId(Int64 DepartmentId) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.ClientSite\Areas\Goals\Controllers\Api\GoalCategoryApiController.cs:line 73
+{ERROR}11/05/2016 12:44:42 - A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.GoalCategory' does not declare a navigation property with the name 'GoalCategory'.
+System.InvalidOperationException: A specified Include path is not valid. The EntityType 'FCL.Cockerham.Ogsm.Data.GoalCategory' does not declare a navigation property with the name 'GoalCategory'.
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
+   at System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at FCL.Cockerham.Ogsm.Data.BaseRepository`1.GetList(Expression`1 filter, Func`2 orderBy, String includeProperties) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.Data\BaseRepository.cs:line 221
+   at FCL.Cockerham.Ogsm.Domain.GoalCategoryService.GetGoalCategoryByDepartment(Int64 _departmentId, IUnitOfWork _dataRepositoryFactory) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.Domain\GoalCategoryService.cs:line 80
+   at FCL.Cockerham.Ogsm.ClientSite.Areas.Goals.Controllers.Api.GoalCategoryApiController.GetGoalCategoriesByDepartmentId(Int64 DepartmentId) in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.ClientSite\Areas\Goals\Controllers\Api\GoalCategoryApiController.cs:line 73
+{ERROR}11/05/2016 14:58:23 - The partial view '_ActionPlanGrid' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Home/_ActionPlanGrid.aspx
+~/Views/Home/_ActionPlanGrid.ascx
+~/Views/Shared/_ActionPlanGrid.aspx
+~/Views/Shared/_ActionPlanGrid.ascx
+~/Views/Home/_ActionPlanGrid.cshtml
+~/Views/Home/_ActionPlanGrid.vbhtml
+~/Views/Shared/_ActionPlanGrid.cshtml
+~/Views/Shared/_ActionPlanGrid.vbhtml
+System.InvalidOperationException: The partial view '_ActionPlanGrid' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Home/_ActionPlanGrid.aspx
+~/Views/Home/_ActionPlanGrid.ascx
+~/Views/Shared/_ActionPlanGrid.aspx
+~/Views/Shared/_ActionPlanGrid.ascx
+~/Views/Home/_ActionPlanGrid.cshtml
+~/Views/Home/_ActionPlanGrid.vbhtml
+~/Views/Shared/_ActionPlanGrid.cshtml
+~/Views/Shared/_ActionPlanGrid.vbhtml
+   at System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName)
+   at ASP._Page_Views_Home_Index_cshtml.Execute() in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.ClientSite\Views\Home\Index.cshtml:line 108
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.RunPage()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:01:59 - The partial view '_ActionPlanGrid' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Home/_ActionPlanGrid.aspx
+~/Views/Home/_ActionPlanGrid.ascx
+~/Views/Shared/_ActionPlanGrid.aspx
+~/Views/Shared/_ActionPlanGrid.ascx
+~/Views/Home/_ActionPlanGrid.cshtml
+~/Views/Home/_ActionPlanGrid.vbhtml
+~/Views/Shared/_ActionPlanGrid.cshtml
+~/Views/Shared/_ActionPlanGrid.vbhtml
+System.InvalidOperationException: The partial view '_ActionPlanGrid' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Home/_ActionPlanGrid.aspx
+~/Views/Home/_ActionPlanGrid.ascx
+~/Views/Shared/_ActionPlanGrid.aspx
+~/Views/Shared/_ActionPlanGrid.ascx
+~/Views/Home/_ActionPlanGrid.cshtml
+~/Views/Home/_ActionPlanGrid.vbhtml
+~/Views/Shared/_ActionPlanGrid.cshtml
+~/Views/Shared/_ActionPlanGrid.vbhtml
+   at System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName)
+   at ASP._Page_Views_Home_Index_cshtml.Execute() in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.ClientSite\Views\Home\Index.cshtml:line 108
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.RunPage()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:05:49 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName)
+   at ASP._Page_Views_Home_Index_cshtml.Execute() in d:\Developments\StratusOgsm\FCL.Cockerham.Ogsm.ClientSite\Views\Home\Index.cshtml:line 109
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.RunPage()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:07:23 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:07:30 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:11:03 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:11:07 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:11:08 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:11:37 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:11:47 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:12:06 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:12:07 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:12:08 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:12:08 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:12:08 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:12:08 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:12:42 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+{ERROR}11/05/2016 15:13:09 - The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+System.InvalidOperationException: The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[FCL.Cockerham.Ogsm.Entities.User]', but this dictionary requires a model item of type 'FCL.Cockerham.Ogsm.Entities.ActionPlan'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)

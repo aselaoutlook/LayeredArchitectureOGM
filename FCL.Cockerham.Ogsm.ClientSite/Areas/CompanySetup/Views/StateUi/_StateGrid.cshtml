@@ -1,0 +1,35 @@
+﻿<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">State List</h3>
+    </div>
+    <div id="gridContent" class="box-body">
+        <table id="tblStates" class="table table-bordered table-striped" ng-table="stateVm.tableParams">
+            <thead>
+                <tr>
+                    <th>State Name</th>
+                    <th>State Code</th>
+                    <th>Country</th>
+                    <th>Global Region</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="state in $data">
+                    <td data-title="'StateName'">{{state.StateName}}</td>
+                    <td data-title="'StateCode'">{{state.StateCode}}</td>
+                    <td data-title="'Country'">{{state.Country.Name}}</td>
+                    <td data-title="'Global Region'">{{state.Country.GlobalRegion.Name}}</td>
+                    <td data-title="'Edit'">
+                        <button type="button"
+                                class="btn btn-default btn-xs pull-right"
+                                ng-click="LoadById(state.StateId)">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        @Resources.SystemResources.Common_webgrid_row_count_text <span id="rowCount">{{stateVm.tableParams.total()}}</span>
+    </div>
+</div>

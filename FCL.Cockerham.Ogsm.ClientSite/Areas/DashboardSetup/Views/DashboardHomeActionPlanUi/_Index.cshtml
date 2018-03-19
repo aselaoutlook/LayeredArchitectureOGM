@@ -1,0 +1,14 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.ActionPlanDto
+
+
+<div class="row">
+    <div class="col-md-12 hidden">
+        <div class="box box-success">
+            @Html.Partial("_CreateActionPlan", @Model)
+        </div>
+    </div>
+    <div class="col-md-12">
+        @Html.Partial("_ActionPlanGrid")
+    </div>
+</div>
+

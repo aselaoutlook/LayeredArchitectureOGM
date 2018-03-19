@@ -1,0 +1,32 @@
+﻿@using FCL.Cockerham.Ogsm.Entities
+@using FCL.Web.Framework.Core.RazorExtentions
+@model IEnumerable<FCL.Cockerham.Ogsm.Entities.Audit>
+
+@{
+    ViewBag.Title = "Audit Trail";
+}
+<div class="container">
+
+    <div>
+
+        <h1 class="text-center">@ViewBag.Title</h1>
+
+        @(Html.TableFor<Audit>()
+            .Columns(column =>
+            {
+                column.Expression(p => p.Action).Title("Activity");
+                column.Expression(p => p.EventDateUTC).Title("Date/Time");
+                column.Expression(p => p.OldData).Title("Previous values");
+                column.Expression(p => p.NewData).Title("Current values");
+                column.Expression(p => p.UserName).Title("User");
+            })
+            .TableId("audit")
+            .ClassList("class1 class2 etc")
+            .DataSource(this.Model)
+            .ToHtml()
+        )
+
+    </div>
+
+    
+</div>

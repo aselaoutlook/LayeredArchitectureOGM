@@ -1,0 +1,40 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.PillarDto
+
+@{
+    ViewBag.Title = "Stratus OGSM - Client Portal Company Setup - Pillars";
+}
+
+<script src="~/Scripts/App/CompanySetup/Pillar/Pillar.js"></script>
+
+<section class="content-header">
+    <h1>
+        Company Setup - Pillars
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li class="active">Company Setup - Pillars</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="col-lg-12 ">
+        <div>
+            <div ng-controller="PillarViewModel as pillarVm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box box-success">
+                            @Html.Partial("_CreatePillar", @Model)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        @Html.Partial("_PillarGrid")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->
+
+

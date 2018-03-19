@@ -1,0 +1,49 @@
+﻿@using FCL.Web.Framework.Core.RazorExtentions
+@{
+        ViewBag.Title = "Template Editor";
+    }
+    <div class="container">
+
+        <div>
+
+            <h1 class="text-center">@ViewBag.Title</h1>
+
+            <div class="row">
+                <div class="col-md-7">
+                    @(Html.TemplateEditorFor().EditorId("summernote")            
+                        .EditorClasses("1 2 3")
+                        .Height(300)                        
+                        .EditorMaxHeight(350)
+                        .IsTemplateEditor(true)
+                        .TagRegxp("@View\\w+.\\w+")
+                        .SaveTemplateCallback("$('#raw').val(data);")
+                        .ResetTemplateCallback("")
+                        .ToHtml());
+                </div>
+                <div class="col-md-5">
+                    <button class="btn btn-default btn-sm btn-primary" id="refresh" type="button">Send to Editor</button>
+                    <textarea id="raw" rows="20" cols="60">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and @@ViewBag.typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type @@ViewBag.specimen book. It has survived not only five centuries, but also the leap into electronic @@ViewBag.typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of @@ViewBag.Letraset sheets containing Lorem Ipsum passages, and more recently with desktop @@ViewBag.publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                        </p>
+
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical @@ViewBag.Latin literature from 45 BC, making it over 2000 years old. @@ViewBag.Richard McClintock, a Latin professor at Hampden-Sydney College in @ViewBag.Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical @ViewBag.literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by @ViewBag.Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        </p>                        
+                    </textarea>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+<script>
+    $(document).ready(function () {
+        $("#refresh").click(function () {
+            data = $('#raw').val();
+            $('#summernote').code(data, true); //set data that needs to be parsed
+        });
+    });
+</script>

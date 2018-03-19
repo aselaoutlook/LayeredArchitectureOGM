@@ -1,0 +1,40 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.StateDto
+
+@{
+    ViewBag.Title = "Stratus OGSM - Client Portal Company Setup - States";
+}
+
+<script src="~/Scripts/App/CompanySetup/State/State.js"></script>
+
+<section class="content-header">
+    <h1>
+        Company Setup - States
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li class="active">Company Setup - States</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="col-lg-12 ">
+        <div>
+            <div ng-controller="StateViewModel as stateVm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box box-success">
+                            @Html.Partial("_CreateState", @Model)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        @Html.Partial("_StateGrid")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->
+
+

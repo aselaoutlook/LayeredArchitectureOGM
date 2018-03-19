@@ -1,0 +1,34 @@
+﻿@model FCL.Cockerham.Ogsm.Entities.DTOs.UserDto
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(":input[type='button']").button();
+        $(":input[type='submit']").button();
+    });
+</script>
+@using (Html.BeginForm("UserDetails", "Admin", FormMethod.Post))
+{
+    <div class="panel panel-primary table-responsive">
+        <div class="panel-heading">
+            User Details
+        </div>
+        <div class="panel-body">
+            @Html.Partial("_userDetails", Model)
+        </div>
+        <div class="panel-footer">
+            <input type="button" value="Edit" class="btn btn-primary" onclick="location.href='@Url.Action("UserEdit", "Admin", new { id = Model.UserId })'" />
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary table-responsive">
+        <div class="panel-heading">
+            Roles Associated with this User
+        </div>
+        <div class="panel-body">
+            @Html.Partial("_ListUserRoleTable", Model)
+        </div>
+        <div class="panel-footer">
+            @Html.ActionLink("Go to Users", "Index", "Admin")
+        </div>
+    </div>
+}

@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="FCL.Cockerham.Ogsm.Admin.MvcApplication" Language="C#" %>
